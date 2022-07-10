@@ -11,7 +11,7 @@ class CategoriesControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should reach show controller action" do
-    get categories_path(@category)
+    get category_path(@category)
     assert_response :success
   end
 
@@ -24,7 +24,7 @@ class CategoriesControllerTest < ActionDispatch::IntegrationTest
     assert_difference "Category.count", 1 do
       post categories_path, params: { category: { name: "Another Name", description: "Some description", theme_color: "#540D6E" } }
     end
-    assert_redirected_to categories_path(Category.last)
+    assert_redirected_to category_path(Category.last)
   end
 
   test "should reach edit controller action" do
@@ -36,7 +36,7 @@ class CategoriesControllerTest < ActionDispatch::IntegrationTest
     assert_no_difference "Category.count" do
       patch category_path(@category), params: { category: { name: "New Name", description: "Some description", theme_color: "#540D6E" } }
     end
-    assert_redirected_to categories_path(@category)
+    assert_redirected_to category_path(@category)
   end
 
   test "should reach destroy controller action" do

@@ -1,0 +1,11 @@
+<h1>All Categories</h1>
+<%= link_to "New Category", new_category_path %>
+<hr>
+
+<% @categories.each do |category| %>
+  <div style="border-bottom: 3px solid <%= category.theme_color %>;">
+    <%= render "category", obj: category %>
+    <%= link_to "View", category_path(category) %> 
+  </div>
+<% end %>
+
