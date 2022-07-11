@@ -24,6 +24,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_07_11_121710) do
     t.text "details"
     t.datetime "deadline"
     t.boolean "completed", default: false
+    t.boolean "overdue", default: false
     t.integer "category_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
