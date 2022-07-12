@@ -6,44 +6,44 @@ class TasksControllerTest < ActionDispatch::IntegrationTest
     @task = Task.create(name: "Some Task", details: "Some details", deadline: DateTime.now + 1, category_id: @category.id)
   end
 
-  test "should reach index controller action" do
-    get category_tasks_path(@category.id)
-    assert_response :success
-  end
+  # test "should reach index controller action" do
+  #   get category_tasks_path(@category)
+  #   assert_response :success
+  # end
 
   test "should reach show controller action" do
-    get category_task_path(@category.id, @task)
+    get category_task_path(@category, @task)
     assert_response :success
   end
 
   test "should reach new controller action" do
-    get new_category_task_path(@category.id)
+    get new_category_task_path(@category)
     assert_response :success
   end
 
   test "should reach create controller action" do
     assert_difference "Task.count", 1 do
-      post category_tasks_path(@category.id), params: { task: { name: "Some Task", details: "Some details", deadline: DateTime.now + 1 } }
+      post category_tasks_path(@category), params: { task: { name: "Some Task", details: "Some details", deadline: DateTime.now + 1 } }
     end
-    assert_redirected_to category_task_path(@category.id, Task.last)
+    assert_redirected_to category_task_path(@category, Task.last)
   end
 
   test "should reach edit controller action" do
-    get edit_category_task_path(@category.id, @task)
+    get edit_category_task_path(@category, @task)
     assert_response :success
   end
 
   test "should reach update controller action" do
     assert_no_difference "Task.count" do
-      patch category_task_path(@category.id, @task), params: { task: { name: "New Name", description: "Some Description", deadline: DateTime.now + 2 } }
+      patch category_task_path(@category, @task), params: { task: { name: "New Name", description: "Some Description", deadline: DateTime.now + 2 } }
     end
-    assert_redirected_to category_task_path(@category.id, @task)
+    assert_redirected_to category_task_path(@category, @task)
   end
 
   test "should reach destroy controller action" do
     assert_difference "Task.count", -1 do
-      delete category_task_path(@category.id, @task.id)
+      delete category_task_path(@category, @task)
     end
-    assert_redirected_to category_tasks_path(@category.id)
+    assert_redirected_to category_path(@category)
   end
 end

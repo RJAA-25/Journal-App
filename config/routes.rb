@@ -4,6 +4,6 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "articles#index"
   resources :categories do
-    resources :tasks
+    resources :tasks, except: [:index]
   end
 end

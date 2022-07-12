@@ -24,6 +24,11 @@ class TaskTest < ActiveSupport::TestCase
   end
 
   # :deadline attribute tests
+  test "should not save without deadline" do
+    @task.deadline = nil
+    assert_not @task.save
+  end
+
   test "should not save when deadline has passed" do
     @task.deadline = DateTime.now - 1
     assert_not @task.save

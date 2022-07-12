@@ -7,6 +7,7 @@ class CategoriesController < ApplicationController
   end
 
   def show
+    @tasks = @category.tasks
   end
 
   def new

@@ -1,9 +1,19 @@
 <h1>View Category</h1>
 <%= link_to "Edit", edit_category_path(@category) %> | 
-<%= link_to "Delete", category_path(@category), data: { turbo_method: :delete, turbo_confirm: "#{@category.name} category will be deleted. Are you sure?"} %>
+<%= link_to "Delete", category_path(@category), data: { turbo_method: :delete, turbo_confirm: "#{@category.name} category and its tasks will be deleted. Are you sure?"} %> | 
+<%= link_to "All Categories", categories_path %>
 <hr>
 
 <%= render "category", obj: @category %>
 
 <hr>
-<%= link_to "All Categories", categories_path %>
+<h2>Category Tasks</h2>
+<%= link_to "New Task", new_category_task_path(@category) %>
+<hr>
+
+<% @tasks.each do |task| %>
+  <div>
+    <%= render "task", obj: task %>
+    <%= link_to "View", category_task_path(@category, task) %>
+  </div>
+<% end %>

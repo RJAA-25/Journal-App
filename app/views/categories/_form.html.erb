@@ -2,7 +2,7 @@
 
   <div>
     <%= f.label :name %> <br>
-    <%= f.text_field :name%>
+    <%= f.text_field :name %>
     <ul>
       <% @category.errors.full_messages_for(:name).each do |msg| %>
         <li><%= msg %></li>
