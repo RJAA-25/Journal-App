@@ -2,9 +2,9 @@ class CategoriesController < ApplicationController
   before_action :set_category, only: [:show, :edit, :update, :destroy]
 
   
-  def index
-    @categories = Category.all
-  end
+  # def index
+  #   @categories = Category.all
+  # end
 
   def show
     @tasks = @category.tasks
@@ -39,7 +39,7 @@ class CategoriesController < ApplicationController
   def destroy
     @category.destroy
     flash[:alert] = "Category has been deleted"
-    redirect_to categories_path, status: :see_other
+    redirect_to dashboard_path, status: :see_other
   end
 
 

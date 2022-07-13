@@ -1,1 +1,23 @@
 <h1>Dashboard</h1>
+
+<div>This space is reserved for your profile</div>
+
+<div>This space is reserved for tasks today</div>
+
+<h2>ALL CATEGORIES</h2>
+<%= link_to "New Category", new_category_path %>
+<hr>
+
+<% @categories.each do |category| %>
+  <ul>
+  <div style="border-bottom: 3px solid <%= category.theme_color %>;">
+    <h2><%= category.name %></h2>
+    <p><%= category.description %></p> 
+    <ul>
+      <li>ID# <%= category.id %></li>
+      <li>Theme: <%= category.theme_color %></li>
+    </ul>
+    <%= link_to "View", category_path(category) %> 
+  </div>
+  </ul>
+<% end %>
