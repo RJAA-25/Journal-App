@@ -1,6 +1,6 @@
 require "test_helper"
 
-class BlogFlowTest < ActionDispatch::IntegrationTest
+class CategoryFlowTest < ActionDispatch::IntegrationTest
   setup do
     @category = Category.create(name: "Category 1", description: "This is a description")
   end
