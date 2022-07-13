@@ -5,10 +5,10 @@ class CategoriesControllerTest < ActionDispatch::IntegrationTest
     @category = Category.create(name: "Some Name", description: "Some description")
   end
 
-  test "should reach index controller action" do
-    get categories_path
-    assert_response :success
-  end
+  # test "should reach index controller action" do
+  #   get categories_path
+  #   assert_response :success
+  # end
 
   test "should reach show controller action" do
     get category_path(@category)
@@ -43,6 +43,6 @@ class CategoriesControllerTest < ActionDispatch::IntegrationTest
     assert_difference "Category.count", -1 do
       delete category_path(@category)
     end
-    assert_redirected_to categories_path
+    assert_redirected_to dashboard_path
   end
 end
