@@ -10,7 +10,9 @@
     <%= javascript_importmap_tags %>
   </head>
 
-  <body>
+  <body class="bg-main">
+    <%= render "layouts/components/navbar" %>
     <%= yield %>
+    <%= render "layouts/components/footer" %>
   </body>
 </html>
