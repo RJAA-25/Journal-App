@@ -5,6 +5,7 @@ class PagesController < ApplicationController
   end
 
   def dashboard
+    @themes = color_array
     @categories = Category.all
   end
 
