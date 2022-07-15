@@ -6,8 +6,8 @@
       </div>
     </div>
   <% else %>
-    <div class="row g-2 mx-1 my-2 border">
-      <% @themes.each do |color| %>
+    <% @themes.each do |color| %>
+      <div class="row g-2 mx-1 my-2">
         <% obj.each do |obj| %>
           <% if obj.theme_color == color %>
           <div class="col-12 col-md-6 col-xl-4">
@@ -26,7 +26,7 @@
           </div>
           <% end %>
         <% end %>
-      <% end %>
-    </div>
+      </div>
+    <% end %>
   <% end %>
 </div>
