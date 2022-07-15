@@ -8,34 +8,221 @@
   <%= render "layouts/components/overview" %>
 
 
-  <div class="container px-2 d-flex justify-content-between">
-     <p class="h3 text-muted">All Categories</p>
-    <%= link_to "New Category", new_category_path, class: "btn btn-primary" %>
+  <div class="container px-2 d-flex justify-content-between align-items-center">
+    <p class="h3 text-muted">All Categories</p>
+    <%= link_to "Add", new_category_path, class: "btn btn-primary" %>
   </div>
-  
+
   <div class="container p-2 border border-secondary">
-    <div class="row g-2 m-2">
-      <div class="col-12 col-md-6 col-lg-4 col-xl-3 border border-danger">Row 1</div>
-      <div class="col-12 col-md-6 col-lg-4 col-xl-3 border border-danger">Row 1</div>
-      <div class="col-12 col-md-6 col-lg-4 col-xl-3 border border-danger">Row 1</div>
-      <div class="col-12 col-md-6 col-lg-4 col-xl-3 border border-danger">Row 1</div>
+
+    <div class="row g-2 mx-1 my-2">
+      <div class="col-12 col-md-6 col-xl-4">
+        <%= link_to dashboard_path, class: "text-decoration-none text-reset" do %>
+          <div class="p-3 text-white shadow-sm" style="background-color: #540D6E">
+            <p class="fs-5 mb-0 text-white text-opacity-50 text-end">No tasks assigned</p>
+            <p class="fs-2 fw-bold text-wrap">First Category</p>
+          </div>
+        <% end %>
+      </div>
+      <div class="col-12 col-md-6 col-xl-4">
+        <%= link_to dashboard_path, class: "text-decoration-none text-reset" do %>
+          <div class="p-3 text-white shadow-sm" style="background-color: #540D6E">
+            <p class="fs-5 mb-0 text-white text-end">5 / 7 tasks</p>
+            <p class="fs-2 fw-bold text-wrap">This is maximum</p>
+          </div>
+        <% end %>
+      </div>
+      <div class="col-12 col-md-6 col-xl-4">
+        <%= link_to dashboard_path, class: "text-decoration-none text-reset" do %>
+          <div class="p-3 text-white shadow-sm" style="background-color: #540D6E">
+            <p class="fs-5 mb-0 text-white text-end">5 / 7 tasks</p>
+            <p class="fs-2 fw-bold text-wrap">This is maximum</p>
+          </div>
+        <% end %>
+      </div>
+      <div class="col-12 col-md-6 col-xl-4">
+        <%= link_to dashboard_path, class: "text-decoration-none text-reset" do %>
+          <div class="p-3 text-white shadow-sm" style="background-color: #540D6E">
+            <p class="fs-5 mb-0 text-white text-end">5 / 7 tasks</p>
+            <p class="fs-2 fw-bold text-wrap">This is maximum</p>
+          </div>
+        <% end %>
+      </div>
     </div>
 
-    <%# <div class="row g-2 m-2">
-      <div class="col-12 col-md-6 col-lg-4 col-xl-3 border bg-secondary">Row 2</div>
-      <div class="col-12 col-md-6 col-lg-4 col-xl-3 border bg-secondary">Row 2</div>
-      <div class="col-12 col-md-6 col-lg-4 col-xl-3 border bg-secondary">Row 2</div>
+    <div class="row g-2 mx-1 my-2">
+      <div class="col-12 col-md-6 col-xl-4">
+        <%= link_to dashboard_path, class: "text-decoration-none text-reset" do %>
+          <div class="p-3 text-white shadow-sm" style="background-color: #9f86c0">
+            <p class="fs-5 mb-0 text-white text-opacity-50 text-end">No tasks assigned</p>
+            <p class="fs-2 fw-bold text-wrap">First Category</p>
+          </div>
+        <% end %>
+      </div>
+      <div class="col-12 col-md-6 col-xl-4">
+        <%= link_to dashboard_path, class: "text-decoration-none text-reset" do %>
+          <div class="p-3 text-white shadow-sm" style="background-color: #9f86c0">
+            <p class="fs-5 mb-0 text-white text-end">5 / 7 tasks</p>
+            <p class="fs-2 fw-bold text-wrap">This is maximum</p>
+          </div>
+        <% end %>
+      </div>
+    </div> 
+
+    <div class="row g-2 mx-1 my-2">
+      <div class="col-12 col-md-6 col-xl-4">
+        <%= link_to dashboard_path, class: "text-decoration-none text-reset" do %>
+          <div class="p-3 text-white shadow-sm" style="background-color: #c71f37">
+            <p class="fs-5 mb-0 text-white text-opacity-50 text-end">No tasks assigned</p>
+            <p class="fs-2 fw-bold text-wrap">First Category</p>
+          </div>
+        <% end %>
+      </div>
+      <div class="col-12 col-md-6 col-xl-4">
+        <%= link_to dashboard_path, class: "text-decoration-none text-reset" do %>
+          <div class="p-3 text-white shadow-sm" style="background-color: #c71f37">
+            <p class="fs-5 mb-0 text-white text-end">5 / 7 tasks</p>
+            <p class="fs-2 fw-bold text-wrap">This is maximum</p>
+          </div>
+        <% end %>
+      </div>
+      <div class="col-12 col-md-6 col-xl-4">
+        <%= link_to dashboard_path, class: "text-decoration-none text-reset" do %>
+          <div class="p-3 text-white shadow-sm" style="background-color: #c71f37">
+            <p class="fs-5 mb-0 text-white text-end">5 / 7 tasks</p>
+            <p class="fs-2 fw-bold text-wrap">This is maximum</p>
+          </div>
+        <% end %>
+      </div>
+    </div> 
+
+    <div class="row g-2 mx-1 my-2">
+      <div class="col-12 col-md-6 col-xl-4">
+        <%= link_to dashboard_path, class: "text-decoration-none text-reset" do %>
+          <div class="p-3 text-white shadow-sm" style="background-color: #e36414">
+            <p class="fs-5 mb-0 text-white text-opacity-50 text-end">No tasks assigned</p>
+            <p class="fs-2 fw-bold text-wrap">First Category</p>
+          </div>
+        <% end %>
+      </div>
+      <div class="col-12 col-md-6 col-xl-4">
+        <%= link_to dashboard_path, class: "text-decoration-none text-reset" do %>
+          <div class="p-3 text-white shadow-sm" style="background-color: #e36414">
+            <p class="fs-5 mb-0 text-white text-end">5 / 7 tasks</p>
+            <p class="fs-2 fw-bold text-wrap">This is maximum</p>
+          </div>
+        <% end %>
+      </div>
+    </div> 
+
+    <div class="row g-2 mx-1 my-2">
+      <div class="col-12 col-md-6 col-xl-4">
+        <%= link_to dashboard_path, class: "text-decoration-none text-reset" do %>
+          <div class="p-3 text-white shadow-sm" style="background-color: #3a5a40">
+            <p class="fs-5 mb-0 text-white text-opacity-50 text-end">No tasks assigned</p>
+            <p class="fs-2 fw-bold text-wrap">First Category</p>
+          </div>
+        <% end %>
+      </div>
+      <div class="col-12 col-md-6 col-xl-4">
+        <%= link_to dashboard_path, class: "text-decoration-none text-reset" do %>
+          <div class="p-3 text-white shadow-sm" style="background-color: #3a5a40">
+            <p class="fs-5 mb-0 text-white text-end">5 / 7 tasks</p>
+            <p class="fs-2 fw-bold text-wrap">This is maximum</p>
+          </div>
+        <% end %>
+      </div>
     </div>
 
-    <div class="row g-2 m-2">
-      <div class="col-12 col-md-6 col-lg-4 col-xl-3 border bg-secondary">Row 3</div>
+    <div class="row g-2 mx-1 my-2">
+      <div class="col-12 col-md-6 col-xl-4">
+        <%= link_to dashboard_path, class: "text-decoration-none text-reset" do %>
+          <div class="p-3 text-white shadow-sm" style="background-color: #6a994e">
+            <p class="fs-5 mb-0 text-white text-opacity-50 text-end">No tasks assigned</p>
+            <p class="fs-2 fw-bold text-wrap">First Category</p>
+          </div>
+        <% end %>
+      </div>
+      <div class="col-12 col-md-6 col-xl-4">
+        <%= link_to dashboard_path, class: "text-decoration-none text-reset" do %>
+          <div class="p-3 text-white shadow-sm" style="background-color: #6a994e">
+            <p class="fs-5 mb-0 text-white text-end">5 / 7 tasks</p>
+            <p class="fs-2 fw-bold text-wrap">This is maximum</p>
+          </div>
+        <% end %>
+      </div>
+      <div class="col-12 col-md-6 col-xl-4">
+        <%= link_to dashboard_path, class: "text-decoration-none text-reset" do %>
+          <div class="p-3 text-white shadow-sm" style="background-color: #6a994e">
+            <p class="fs-5 mb-0 text-white text-end">5 / 7 tasks</p>
+            <p class="fs-2 fw-bold text-wrap">This is maximum</p>
+          </div>
+        <% end %>
+      </div>
+      <div class="col-12 col-md-6 col-xl-4">
+        <%= link_to dashboard_path, class: "text-decoration-none text-reset" do %>
+          <div class="p-3 text-white shadow-sm" style="background-color: #6a994e">
+            <p class="fs-5 mb-0 text-white text-end">5 / 7 tasks</p>
+            <p class="fs-2 fw-bold text-wrap">This is maximum</p>
+          </div>
+        <% end %>
+      </div>
+      <div class="col-12 col-md-6 col-xl-4">
+        <%= link_to dashboard_path, class: "text-decoration-none text-reset" do %>
+          <div class="p-3 text-white shadow-sm" style="background-color: #6a994e">
+            <p class="fs-5 mb-0 text-white text-end">5 / 7 tasks</p>
+            <p class="fs-2 fw-bold text-wrap">This is maximum</p>
+          </div>
+        <% end %>
+      </div>
     </div>
 
-    <div class="row g-2 m-2">
-      <div class="col-12 col-md-6 col-lg-4 col-xl-3 border bg-secondary">Row 4</div>
-      <div class="col-12 col-md-6 col-lg-4 col-xl-3 border bg-secondary">Row 4</div>
-      <div class="col-12 col-md-6 col-lg-4 col-xl-3 border bg-secondary">Row 4</div>
-    </div> %>
+    <div class="row g-2 mx-1 my-2">
+      <div class="col-12 col-md-6 col-xl-4">
+        <%= link_to dashboard_path, class: "text-decoration-none text-reset" do %>
+          <div class="p-3 text-white shadow-sm" style="background-color: #3f37c9">
+            <p class="fs-5 mb-0 text-white text-opacity-50 text-end">No tasks assigned</p>
+            <p class="fs-2 fw-bold text-wrap">First Category</p>
+          </div>
+        <% end %>
+      </div>
+      <div class="col-12 col-md-6 col-xl-4">
+        <%= link_to dashboard_path, class: "text-decoration-none text-reset" do %>
+          <div class="p-3 text-white shadow-sm" style="background-color: #3f37c9">
+            <p class="fs-5 mb-0 text-white text-end">5 / 7 tasks</p>
+            <p class="fs-2 fw-bold text-wrap">This is maximum</p>
+          </div>
+        <% end %>
+      </div>
+    </div>
+
+    <div class="row g-2 mx-1 my-2">
+      <div class="col-12 col-md-6 col-xl-4">
+        <%= link_to dashboard_path, class: "text-decoration-none text-reset" do %>
+          <div class="p-3 text-white shadow-sm" style="background-color: #4895ef">
+            <p class="fs-5 mb-0 text-white text-opacity-50 text-end">No tasks assigned</p>
+            <p class="fs-2 fw-bold text-wrap">First Category</p>
+          </div>
+        <% end %>
+      </div>
+      <div class="col-12 col-md-6 col-xl-4">
+        <%= link_to dashboard_path, class: "text-decoration-none text-reset" do %>
+          <div class="p-3 text-white shadow-sm" style="background-color: #4895ef">
+            <p class="fs-5 mb-0 text-white text-end">5 / 7 tasks</p>
+            <p class="fs-2 fw-bold text-wrap">This is maximum</p>
+          </div>
+        <% end %>
+      </div>
+      <div class="col-12 col-md-6 col-xl-4">
+        <%= link_to dashboard_path, class: "text-decoration-none text-reset" do %>
+          <div class="p-3 text-white shadow-sm" style="background-color: #4895ef">
+            <p class="fs-5 mb-0 text-white text-end">5 / 7 tasks</p>
+            <p class="fs-2 fw-bold text-wrap">This is maximum</p>
+          </div>
+        <% end %>
+      </div>
+    </div>
+
   </div>
 
 </div>
