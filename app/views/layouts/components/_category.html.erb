@@ -1,24 +1,32 @@
 <div class="container p-2">
-  <div class="row g-2 mx-1 my-2">
-  <% @themes.each do |color| %>
-    <% obj.each do |obj| %>
-      <% if obj.theme_color == color %>
-      <div class="col-12 col-md-6 col-xl-4">
-        <%= link_to category_path(obj), class: "text-decoration-none text-reset" do %>
-          <div class="p-3 text-white shadow-sm" style="background-color: <%= color %>;">
-            <p class="fs-5 mb-0 text-white <%= "text-opacity-50" if obj.tasks.count == 0 %> text-end">
-              <% if obj.tasks.count == 0 %>
-                No tasks assigned
-              <% else %>
-                <%= obj.tasks.count %> <%= "task".pluralize(obj.tasks.count) %>
-              <% end %>
-            </p>
-            <p class="fs-2 fw-bold text-wrap"><%= obj.name %></p>
-          </div>
-        <% end %>
+  <% if obj == nil %>
+    <div class="row p-3 bg-white shadow-sm" style="height: 10vh;">
+      <div class="col border border-2 d-flex justify-content-center align-items-center bg-secondary bg-opacity-10">
+        No Categories
       </div>
+    </div>
+  <% else %>
+    <div class="row g-2 mx-1 my-2 border">
+      <% @themes.each do |color| %>
+        <% obj.each do |obj| %>
+          <% if obj.theme_color == color %>
+          <div class="col-12 col-md-6 col-xl-4">
+            <%= link_to category_path(obj), class: "text-decoration-none text-reset" do %>
+              <div class="p-3 text-white shadow-sm" style="background-color: <%= color %>;">
+                <p class="fs-5 mb-0 text-white <%= "text-opacity-50" if obj.tasks.count == 0 %> text-end">
+                  <% if obj.tasks.count == 0 %>
+                    No tasks assigned
+                  <% else %>
+                    <%= obj.tasks.count %> <%= "task".pluralize(obj.tasks.count) %>
+                  <% end %>
+                </p>
+                <p class="fs-2 fw-bold text-wrap"><%= obj.name %></p>
+              </div>
+            <% end %>
+          </div>
+          <% end %>
+        <% end %>
       <% end %>
-    <% end %>
+    </div>
   <% end %>
-  </div>
 </div>
