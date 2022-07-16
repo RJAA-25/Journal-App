@@ -10,9 +10,9 @@
     <%= javascript_importmap_tags %>
   </head>
 
-  <body class="bg-secondary bg-opacity-10">
+  <body class="d-flex flex-column bg-secondary bg-opacity-10" style="height: 100vh;">
     <%= render "layouts/components/navbar" %>
-    <%= yield %>
+    <div class="flex-grow-1"><%= yield %></div>
     <%= render "layouts/components/footer" %>
   </body>
 </html>

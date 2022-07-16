@@ -1,4 +1,4 @@
-<%= render "layouts/components/breadcrumb" %>
+<%= render "layouts/components/breadcrumb", category: @category ||= nil, task: @task ||= nil %>
 
 <h1>Edit Category</h1>
 <%= link_to "Return", category_path(@category) %>
