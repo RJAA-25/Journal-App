@@ -1,4 +1,4 @@
-<%= render "layouts/components/breadcrumb" %>
+<%= render "layouts/components/breadcrumb", category: @category ||= nil, task: @task ||= nil %>
 
 <div class="container my-4">
   <%= render "layouts/components/profile" %>

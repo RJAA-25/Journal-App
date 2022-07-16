@@ -1,7 +1,27 @@
 <div class="container pt-3 px-3 border-2 border-bottom border-secondary bg-white sticky-top">
   <div aria-label="breadcrumb">
     <ol class="breadcrumb">
-      <li class="breadcrumb-item active"><a href="/dashboard">Dashboard</a></li>
+      <li class="breadcrumb-item <%= "active" if !category && !task %>">
+        <% if !category && !task %>
+          Dashboard
+        <% else %>
+          <a href="/dashboard">Dashboard</a>
+        <% end %>
+      </li>
+      <% if category %>
+        <li class="breadcrumb-item <%= "active" if !task %>">
+          <% if !task %>
+            Category
+          <% else %>
+            <a href="/categories/<%= category.id %>">Category</a>
+          <% end %>
+        </li>
+      <% end %>
+      <% if task %>
+        <li class="breadcrumb-item active">
+          Task
+        </li>
+      <% end %>
     </ol>
   </div>
 </div>

@@ -1,3 +1,5 @@
+<%= render "layouts/components/breadcrumb", category: @category ||= nil, task: @task ||= nil %>
+
 <h1>View Category</h1>
 <%= link_to "Edit", edit_category_path(@category) %> | 
 <%= link_to "Delete", category_path(@category), data: { turbo_method: :delete, turbo_confirm: "#{@category.name} category and its tasks will be deleted. Are you sure?"} %> | 
