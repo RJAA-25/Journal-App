@@ -1,8 +1,29 @@
-<h3><%= obj.name %></h3>
-<p><%= obj.details %></p>
-<ul>
-  <li>ID# <%= obj.id %></li>
-  <li>Deadline: <%= obj.deadline %></li>
-  <li>Completed: <%= obj.completed %></li>
-  <li>Overdue: <%= obj.overdue %></li>
-</ul>
+<div class="container">
+  <% if @tasks.empty? %>
+    <div class="row p-3 bg-white shadow" style="height: 10vh;">
+      <div class="col border border-2 d-flex justify-content-center align-items-center bg-secondary bg-opacity-10">
+        No available tasks
+      </div>
+    </div>
+  <% end %>
+  <% @tasks.each do |task| %>
+    <div class="row bg-white shadow my-2 ">
+      <button class="col-2 btn btn-secondary border-0 rounded-0" 
+        style="<%= "background-color: #{@category.theme_color};" if task.completed %>" 
+        <%= "disabled" if task.completed %> 
+        data-bs-toggle="modal" data-bs-target="#confirmModal">
+        <% if task.completed %>
+          <i class="bi bi-check-circle-fill text-white" style="font-size: 1.25em;"></i>
+        <% else %>
+          <i class="bi bi-app text-white"style="font-size: 1.25em;"></i>
+        <% end %>
+      </button>
+      <%= link_to category_task_path(@category, task), class: "col py-3 px-3 text-decoration-none text-reset" do %>
+        <p class="fs-5 "><%= task.name %></p>
+        <p class="m-0 text-muted">
+          <span class="<%= "text-danger" if task.deadline.today? %>"><%= task.deadline %></span> 
+        </p>
+      <% end %>
+    </div>
+  <% end %>
+</div>

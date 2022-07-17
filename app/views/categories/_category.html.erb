@@ -1,6 +1,26 @@
-<h2><%= obj.name %></h2>
-<p><%= obj.description %></p> 
-<ul>
-  <li>ID# <%= obj.id %></li>
-  <li>Theme: <%= obj.theme_color %></li>
-</ul>
+<div class="container shadow">
+  <div class="row p-4 text-white" style="background-color: <%= obj.theme_color %>;">
+    <div class="col">
+      <h1 class="pb-1 text-capitalize"><%= obj.name %></h1>
+      <button class="btn btn-outline-light btn-sm" type="button" data-bs-toggle="collapse" data-bs-target="#categoryInfo" aria-expanded="false" aria-controls="categoryInfo">
+        Info
+      </button>
+      <%= link_to edit_category_path(obj), class: "btn btn-outline-light btn-sm" do %>
+        Edit
+      <% end %>
+      <%= link_to category_path(obj), data: { turbo_method: :delete, turbo_confirm: "Current category and its tasks will be deleted. Are you sure?"}, class: "btn btn-outline-light btn-sm" do %>
+        Delete
+      <% end %>
+    </div>
+    <div class="col-2">
+      <p class="m-0 fs-1 text-end fw-bold"><%= obj.tasks.count %></p>
+      <p class="m-0 text-end"><%= "task".pluralize(obj.tasks.count) %></p>
+    </div>
+  </div>
+  <div class="row px-3 pt-3 pb-3 bg-white" style="border-style: solid; border-width: 2px; border-color: <%= obj.theme_color %>;">
+    <div class="col collapse" id="categoryInfo">
+      <p class="fs-light"><%= obj.description %></p>
+      <p class="text-muted text-end">Updated <%= obj.updated_at %></p>
+    </div>
+  </div>
+</div>

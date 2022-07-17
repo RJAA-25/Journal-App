@@ -44,8 +44,7 @@ gem "bootsnap", require: false
 # gem "pg"
 gem 'bootstrap', '~> 5.1.3'
 gem 'jquery-rails'
-gem 'bootstrap-icons'
-gem 'bootstrap-icons-helper', '~> 2.0', '>= 2.0.1'
+# gem 'bootstrap-icons'
 
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
