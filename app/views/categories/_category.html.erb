@@ -3,14 +3,14 @@
     <div class="col">
       <h1 class="pb-1 text-capitalize"><%= obj.name %></h1>
       <button class="btn btn-outline-light btn-sm" type="button" data-bs-toggle="collapse" data-bs-target="#categoryInfo" aria-expanded="false" aria-controls="categoryInfo">
-        Info
+        <i class="bi bi-info-circle-fill"></i> Info
       </button>
       <%= link_to edit_category_path(obj), class: "btn btn-outline-light btn-sm" do %>
-        Edit
+        <i class="bi bi-pencil-square"></i> Edit
       <% end %>
-      <%= link_to category_path(obj), data: { turbo_method: :delete, turbo_confirm: "Current category and its tasks will be deleted. Are you sure?"}, class: "btn btn-outline-light btn-sm" do %>
-        Delete
-      <% end %>
+      <button class="btn btn-outline-light btn-sm" data-bs-toggle="modal" data-bs-target="#categoryModal">
+        <i class="bi bi-trash-fill"></i> Delete
+      </button>
     </div>
     <div class="col-2">
       <p class="m-0 fs-1 text-end fw-bold"><%= obj.tasks.count %></p>
