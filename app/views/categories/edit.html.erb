@@ -1,8 +1,11 @@
 <%= render "layouts/components/breadcrumb", category: @category ||= nil, task: @task ||= nil %>
 
 <div class="container my-4">
-  <h1>Edit Category</h1>
-  <%= link_to "Return", category_path(@category) %>
-  <hr>
-  <%= render "form" %>
+  <div class="container p-3 bg-white shadow">
+    <div class="d-flex justify-content-between align-items-center">
+      <h1>Edit Category</h1>
+      <%= link_to "Cancel", category_path(@category), class: "btn btn-outline-primary btn-sm" %>
+    </div>
+    <%= render "form" %>
+  </div>
 </div>

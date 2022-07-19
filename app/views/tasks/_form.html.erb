@@ -1,37 +1,32 @@
 <%= form_with(model: [@category, @task]) do |f| %>
-
-  <div>
-    <%= f.label :name %> <br>
-    <%= f.text_field :name %>
-    <ul>
+  <div class="p-3">
+    <%= f.label :name, class: "form-label" %>
+    <%= f.text_field :name, class: "form-control" %>
+    <div class="container p-2">
       <% @task.errors.full_messages_for(:name).each do |msg| %>
-        <li><%= msg %></li>
+        <p class="m-0 text-danger"><%= msg %></p>
       <% end %>
-    </ul>
+    </div>
   </div>
-
-  <div>
-    <%= f.label :details %> <br>
-    <%= f.text_area :details %>
-    <ul>
+  <div class="p-3">
+    <%= f.label :details, class: "form-label" %> 
+    <%= f.text_area :details, class: "form-control" %>
+    <div class="container p-2">
       <% @task.errors.full_messages_for(:details).each do |msg| %>
-        <li><%= msg %></li>
+        <p class="m-0 text-danger"><%= msg %></p>
       <% end %>
-    </ul>
+    </div>
   </div>
-
-  <div>
-    <%= f.label :deadline %> <br>
-    <%= f.datetime_local_field :deadline %>
-    <ul>
+  <div class="p-3">
+    <%= f.label :deadline, class: "form-label" %>
+    <%= f.datetime_local_field :deadline, class: "form-control" %>
+    <div class="container p-2">
       <% @task.errors.full_messages_for(:deadline).each do |msg| %>
-        <li><%= msg %></li>
+        <p class="m-0 text-danger"><%= msg %></p>
       <% end %>
-    </ul>
+    </div>
   </div>
-
-  <div>
-    <%= f.submit %>
+  <div class="p-3">
+    <%= f.submit class: "btn btn-primary" %>
   </div>
-
 <% end %>
