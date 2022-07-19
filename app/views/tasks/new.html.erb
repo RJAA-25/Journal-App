@@ -1,7 +1,9 @@
 <%= render "layouts/components/breadcrumb", category: @category ||= nil, task: @task ||= nil %>
 
-<h1>Create Task</h1>
+<div class="container my-4">
+  <h1>Create Task</h1>
 <%= link_to "All Tasks", category_path(@category) %>
 <hr>
 
 <%= render "form" %>
+</div>
