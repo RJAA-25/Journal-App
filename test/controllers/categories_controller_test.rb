@@ -5,11 +5,6 @@ class CategoriesControllerTest < ActionDispatch::IntegrationTest
     @category = Category.create(name: "Some Name", description: "Some description")
   end
 
-  # test "should reach index controller action" do
-  #   get categories_path
-  #   assert_response :success
-  # end
-
   test "should reach show controller action" do
     get category_path(@category)
     assert_response :success
@@ -27,6 +22,13 @@ class CategoriesControllerTest < ActionDispatch::IntegrationTest
     assert_redirected_to category_path(Category.last)
   end
 
+  test "should fail create controller action with invalid input" do
+    assert_no_difference "Category.count" do
+      post categories_path, params: { category: { name: nil, description: "Some description", theme_color: "#540D6E" } }
+    end
+    assert_response :unprocessable_entity
+  end
+
   test "should reach edit controller action" do
     get edit_category_path(@category)
     assert_response :success
@@ -37,6 +39,13 @@ class CategoriesControllerTest < ActionDispatch::IntegrationTest
       patch category_path(@category), params: { category: { name: "New Name", description: "Some description", theme_color: "#540D6E" } }
     end
     assert_redirected_to category_path(@category)
+  end
+
+  test "should fail update controller action with invalid input" do
+    assert_no_difference "Category.count" do
+      patch category_path(@category), params: { category: { name: nil, description: "Some description", theme_color: "#540D6E" } }
+    end
+    assert_response :unprocessable_entity
   end
 
   test "should reach destroy controller action" do

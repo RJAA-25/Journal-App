@@ -1,10 +1,6 @@
 class CategoriesController < ApplicationController
+  before_action :toggle_overdue, only: [:show]
   before_action :set_category, only: [:show, :edit, :update, :destroy]
-
-  
-  # def index
-  #   @categories = Category.all
-  # end
 
   def show
     @tasks = @category.tasks

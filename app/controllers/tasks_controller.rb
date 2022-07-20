@@ -1,10 +1,8 @@
 class TasksController < ApplicationController
+  before_action :toggle_overdue, only: [:show]
   before_action :set_category
-  before_action :set_task, only: [:show, :edit, :update, :destroy]
-
-  # def index
-  #   @tasks = @category.tasks.all
-  # end
+  before_action :set_task, only: [:show, :edit, :update, :destroy, :toggle]
+  after_action :reset_overdue, only: [:update]
 
   def show
   end
@@ -41,6 +39,14 @@ class TasksController < ApplicationController
     redirect_to category_path(@category), status: :see_other
   end
 
+  def toggle
+    @task.update(completed: !@task.completed)
+    msg = "Task marked "
+    @task.completed ? msg += "complete" : msg += "incomplete"
+    flash[:notice] = msg
+    redirect_to category_task_path(@category, @task), status: :see_other
+  end
+
 
   private
   def set_category
@@ -49,6 +55,10 @@ class TasksController < ApplicationController
 
   def set_task
     @task = @category.tasks.find(params[:id])
+  end
+
+  def reset_overdue
+    @task.update(overdue: false);
   end
 
   def task_params
