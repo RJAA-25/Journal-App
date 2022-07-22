@@ -5,7 +5,7 @@ class ApplicationController < ActionController::Base
   end
 
   def toggle_overdue
-    @tasks = Task.where("deadline < ?", DateTime.now)
+    @tasks = Task.where(completed: false).where("deadline < ?", DateTime.now)
     @tasks.update_all(overdue: true)
   end
   
