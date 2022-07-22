@@ -13,6 +13,8 @@
   <body class="d-flex flex-column bg-secondary bg-opacity-10" style="height: 100vh;">
     <%= render "layouts/components/navbar" %>
     <div class="flex-grow-1"><%= yield %></div>
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
     <%= render "layouts/components/footer" %>
   </body>
 </html>
