@@ -62,7 +62,7 @@
       <%= f.label :password_confirmation %><br />
       <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
       <ul>
-        <% resource.errors.full_messages_for(:pasword_confirmation).each do |msg|%>
+        <% resource.errors.full_messages_for(:password_confirmation).each do |msg|%>
           <li><%= msg %></li>
         <% end %>
       </ul>

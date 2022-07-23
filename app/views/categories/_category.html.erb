@@ -5,7 +5,7 @@
       <button class="btn btn-outline-light btn-sm" type="button" data-bs-toggle="collapse" data-bs-target="#categoryInfo" aria-expanded="false" aria-controls="categoryInfo">
         <i class="bi bi-info-circle-fill"></i> Info
       </button>
-      <%= link_to edit_category_path(obj), class: "btn btn-outline-light btn-sm" do %>
+      <%= link_to edit_category_path(current_user.username, obj), class: "btn btn-outline-light btn-sm" do %>
         <i class="bi bi-pencil-square"></i> Edit
       <% end %>
       <button class="btn btn-outline-light btn-sm" data-bs-toggle="modal" data-bs-target="#categoryModal">

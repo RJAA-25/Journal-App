@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
   root "pages#home"
-  get "/dashboard" => "pages#dashboard"
   devise_for :users, module: "users", skip: [:sessions]
   devise_scope :user do
     get "login" => "users/sessions#new", as: :new_user_session
@@ -9,8 +8,12 @@ Rails.application.routes.draw do
     get "register" => "users/registrations#new", as: :register
     get ":username/profile" => "users/registrations#edit", as: :profile_edit
   end
-  resources :categories, except: [:index] do
-    resources :tasks, except: [:index]
-    patch "/tasks/:id/toggle" => "tasks#toggle", as: :task_toggle
+  scope ":username" do
+    get "dashboard" => "pages#dashboard"
+    resources :categories, except: [:index] do
+      resources :tasks, except: [:index]
+      patch "/tasks/:id/toggle" => "tasks#toggle", as: :task_toggle
+    end
   end
+  
 end

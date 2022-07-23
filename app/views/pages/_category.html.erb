@@ -11,14 +11,10 @@
       <% obj.each do |obj| %>
         <% if obj.theme_color == color %>
         <div class="col-12 col-md-6 col-xl-4">
-          <%= link_to category_path(obj), class: "text-decoration-none text-reset" do %>
+          <%= link_to category_path(current_user.username, obj), class: "text-decoration-none text-reset" do %>
             <div class="p-3 text-white shadow" style="background-color: <%= color %>;">
               <p class="fs-5 mb-0 text-white <%= "text-opacity-50" if obj.tasks.count == 0 %> text-end">
-                <%# if obj.tasks.count == 0 %>
-                  <%# No tasks assigned %>
-                <%# else %>
-                  <%= obj.tasks.count %> <%= "task".pluralize(obj.tasks.count) %>
-                <%# end %>
+                <%= obj.tasks.count %> <%= "task".pluralize(obj.tasks.count) %>
               </p>
               <p class="fs-2 fw-bold text-wrap text-capitalize"><%= obj.name %></p>
             </div>

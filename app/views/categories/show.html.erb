@@ -4,9 +4,9 @@
   <%= render "category", obj: @category %>
   <div class="container px-2 my-4 d-flex justify-content-between align-items-center">
     <p class="h3 text-muted">All Tasks</p>
-    <%= link_to "Add Task", new_category_task_path(@category), class: "btn btn-success" %>
+    <%= link_to "Add Task", new_category_task_path(current_user.username, @category), class: "btn btn-success" %>
   </div>
-  <%= render "task" %>
+  <%= render "tasks/task" %>
   <%= render "modal" %>
 </div>
 

@@ -5,7 +5,7 @@
         <% if !category && !task %>
           Dashboard
         <% else %>
-          <a href="/dashboard">Dashboard</a>
+          <%= link_to "Dashboard", dashboard_path(current_user.username) %>
         <% end %>
       </li>
       <% if category %>
@@ -13,7 +13,7 @@
           <% if !task %>
             Category
           <% else %>
-            <a href="/categories/<%= category.id %>">Category</a>
+            <%= link_to "Category", category_path(current_user.username, category.id) %>
           <% end %>
         </li>
       <% end %>

@@ -20,7 +20,7 @@
 
     <div class="d-flex justify-content-between">
       <div>
-        <%= link_to edit_category_task_path(@category, @task), class: "btn btn-outline-primary btn-sm" do %>
+        <%= link_to edit_category_task_path(current_user.username, @category, @task), class: "btn btn-outline-primary btn-sm" do %>
           <i class="bi bi-pencil-square"></i> Edit
         <% end %>
         <button class="btn btn-outline-primary btn-sm" data-bs-toggle="modal" data-bs-target="#taskModal">
@@ -29,9 +29,9 @@
       </div>
       <div>
         <% if @task.completed %>
-          <%= link_to "Mark Incomplete", category_task_toggle_path(@category, @task), data: { turbo_method: :patch }, class: "btn btn-secondary btn-sm" %>
+          <%= link_to "Mark Incomplete", category_task_toggle_path(current_user.username, @category, @task), data: { turbo_method: :patch }, class: "btn btn-secondary btn-sm" %>
         <% else %>
-         <%= link_to "Mark Complete", category_task_toggle_path(@category, @task), data: { turbo_method: :patch }, class: "btn btn-success btn-sm" %>
+         <%= link_to "Mark Complete", category_task_toggle_path(current_user.username, @category, @task), data: { turbo_method: :patch }, class: "btn btn-success btn-sm" %>
         <% end %>
       </div>
     </div>
