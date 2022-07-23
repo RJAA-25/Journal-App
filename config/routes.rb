@@ -15,5 +15,4 @@ Rails.application.routes.draw do
       patch "/tasks/:id/toggle" => "tasks#toggle", as: :task_toggle
     end
   end
-  
 end

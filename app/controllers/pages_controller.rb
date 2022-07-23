@@ -7,7 +7,8 @@ class PagesController < ApplicationController
 
   def dashboard
     @themes = color_array
-    @categories = Category.all
+    @categories = current_user.categories
+    @tasks = current_user.tasks.where(completed: false).where(deadline: Date.current.all_day)
+    @tasks_overdue = current_user.tasks.where(completed: false).where(overdue: true)
   end
-
 end

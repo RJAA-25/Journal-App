@@ -1,0 +1,41 @@
+<%= form_with(model: @category, url: categories_path(current_user.username)) do |f| %>
+  <div class="p-3">
+    <%= f.label :name, class: "form-label" %>
+    <%= f.text_field :name, class: "form-control" %>
+    <div class="container p-2">
+      <% @category.errors.full_messages_for(:name).each do |msg| %>
+        <p class="m-0 text-danger"><%= msg %></p>
+      <% end %>
+    </div>
+  </div>
+  <div class="p-3">
+    <%= f.label :description, class: "form-label" %>
+    <%= f.text_area :description, class: "form-control" %>
+    <div class="container p-2">
+      <% @category.errors.full_messages_for(:description).each do |msg| %>
+        <p class="m-0 text-danger"><%= msg %></p>
+      <% end %>
+    </div>
+  </div>
+  <div class="p-3">
+    <%= f.label :theme_color, class: "form-label" %>
+    <select name="category[theme_color]" id="category_theme_color" class="form-select">
+      <option value="#540D6E" class="theme-1" <%= "selected" if @category.theme_color == "#540D6E" %>>Color 1: #540D6E</option>
+      <option value="#9F86C0" class="theme-2" <%= "selected" if @category.theme_color == "#9F86C0" %>>Color 2: #9F86C0</option>
+      <option value="#C71F37" class="theme-3" <%= "selected" if @category.theme_color == "#C71F37" %>>Color 3: #C71F37</option>
+      <option value="#E36414" class="theme-4" <%= "selected" if @category.theme_color == "#E36414" %>>Color 4: #E36414</option>
+      <option value="#3A5A40" class="theme-5" <%= "selected" if @category.theme_color == "#3A5A40" %>>Color 5: #3A5A40</option>
+      <option value="#6A994E" class="theme-6" <%= "selected" if @category.theme_color == "#6A994E" %>>Color 6: #6A994E</option>
+      <option value="#3F37C9" class="theme-7" <%= "selected" if @category.theme_color == "#3F37C9" %>>Color 7: #3F37C9</option>
+      <option value="#4895EF" class="theme-8" <%= "selected" if @category.theme_color == "#4895EF" %>>Color 8: #4895EF</option>
+    </select>
+    <div class="container p-2">
+      <% @category.errors.full_messages_for(:theme_color).each do |msg| %>
+        <p class="m-0 text-danger"><%= msg %></p>
+      <% end %>
+    </div>
+  </div>
+  <div class="p-3">
+    <%= f.submit  class: "btn btn-primary" %>
+  </div>
+<% end %>

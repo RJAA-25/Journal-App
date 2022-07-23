@@ -9,32 +9,34 @@
   </div>
   <div class="tab-content py-2" id="pills-tabContent">
     <div class="tab-pane fade show active" id="pills-today" role="tabpanel" aria-labelledby="pills-today-tab" tabindex="0">
-      <div class="p-3 m-2 bg-secondary bg-opacity-10 border border-2 text-center">
+      <% if @tasks.empty? %>
+        <div class="p-3 m-2 bg-secondary bg-opacity-10 border border-2 text-center">
           No scheduled tasks
-      </div>
-      <div class="px-3 pt-3 pb-2 m-2 bg-secondary bg-opacity-10 border border-2 text-primary">
-        <p>Watch design tutorials on Youtube</p>
-        <p  class="fw-light text-end text-muted mb-0">Complete by 10:00</p>
-      </div>
-      <div class="px-3 pt-3 pb-2 m-2 bg-secondary bg-opacity-10 border border-2 text-primary">
-        <p>Watch design tutorials on Youtube</p>
-        <p  class="fw-light text-end text-muted mb-0 text-primary">Complete by 10:00</p>
-      </div>
+        </div>
+      <% end %>
+      <% @tasks.each do |task| %>
+          <%= link_to category_task_path(current_user.username, task.category_id, task), class: "text-decoration-none" do %>
+            <div class="px-3 pt-3 pb-2 m-2 bg-secondary bg-opacity-10 border border-2 text-primary">
+              <p><%= task.name %></p>
+              <p class="fw-light text-end text-muted mb-0"><%= task.deadline.to_fs(:long) %></p>
+            </div>
+        <% end %>
+      <% end %>
     </div>
-    
     <div class="tab-pane fade" id="pills-overdue" role="tabpanel" aria-labelledby="pills-overdue-tab" tabindex="0">
-      <div class="p-3 m-2 bg-secondary bg-opacity-10 border border-2 text-center">
-        No overdue tasks
-      </div>
-      <div class="px-3 pt-3 pb-2 m-2 bg-secondary bg-opacity-10 border border-2 text-danger">
-        <p>Watch design tutorials on Youtube</p>
-        <p  class="fw-light text-end text-muted mb-0">Complete by 10:00</p>
-      </div>
-
-      <div class="px-3 pt-3 pb-2 m-2 bg-secondary bg-opacity-10 border border-2 text-danger">
-        <p>Watch design tutorials on Youtube</p>
-        <p  class="fw-light text-end text-muted mb-0">Complete by 10:00</p>
-      </div>
+      <% if @tasks_overdue.empty? %>
+        <div class="p-3 m-2 bg-secondary bg-opacity-10 border border-2 text-center">
+          No overdue tasks
+        </div>
+      <% end %>
+      <% @tasks_overdue.each do |overdue| %>
+        <%= link_to category_task_path(current_user.username, overdue.category_id, overdue.id), class: "text-decoration-none" do %>
+          <div class="px-3 pt-3 pb-2 m-2 bg-secondary bg-opacity-10 border border-2 text-danger">
+            <p><%= overdue.name %></p>
+            <p class="fw-light text-end text-muted mb-0"><%= overdue.deadline.to_fs(:long) %></p>
+          </div>
+        <% end %>
+      <% end %>
     </div>
   </div>
 </div>

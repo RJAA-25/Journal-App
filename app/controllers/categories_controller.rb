@@ -7,14 +7,14 @@ class CategoriesController < ApplicationController
   end
 
   def new
-    @category = Category.new
+    @category = current_user.categories.build
   end
 
   def create
-    @category = Category.new(category_params)
+    @category = current_user.categories.build(category_params)
     if @category.save
       flash[:notice] = "Category created as \"#{@category.name}\""
-      redirect_to category_path(@category)
+      redirect_to category_path(current_user.username, @category)
     else
       render :new, status: :unprocessable_entity
     end
@@ -26,7 +26,7 @@ class CategoriesController < ApplicationController
   def update
     if @category.update(category_params)
       flash[:notice] = "Category updated as \"#{@category.name}\""
-      redirect_to category_path(@category)
+      redirect_to category_path(current_user.username, @category)
     else
       render :edit, status: :unprocessable_entity
     end
@@ -35,13 +35,13 @@ class CategoriesController < ApplicationController
   def destroy
     @category.destroy
     flash[:alert] = "Category has been deleted"
-    redirect_to dashboard_path, status: :see_other
+    redirect_to dashboard_path(current_user.username), status: :see_other
   end
 
 
   private
   def set_category
-    @category = Category.find(params[:id])
+    @category = current_user.categories.find(params[:id])
   end
 
   def category_params

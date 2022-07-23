@@ -35,7 +35,7 @@ class DeviseCreateUsers < ActiveRecord::Migration[7.0]
       t.string :first_name
       t.string :last_name
       t.string :username
-      t.text :bio
+      t.text :bio, default: ""
 
       t.timestamps null: false
     end

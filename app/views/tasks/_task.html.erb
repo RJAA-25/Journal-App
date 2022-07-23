@@ -17,7 +17,7 @@
           <i class="bi bi-app text-white"style="font-size: 1.25em;"></i>
         <% end %>
       <% end %>
-      <%= link_to category_task_path(current_user.username, @category, task), class: "col py-3 px-3 text-decoration-none text-reset" do %>
+      <%= link_to category_task_path(current_user.username, @category, task), class: "col py-3 px-3 text-decoration-none text-reset #{"bg-danger bg-opacity-10" if !task.completed && task.overdue }" do %>
         <p class="fs-5 "><%= task.name %></p>
         <p class="m-0 text-muted">
           <span class="<%= "text-danger" if task.deadline.today? %>"><%= task.deadline %></span> 

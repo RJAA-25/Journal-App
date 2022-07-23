@@ -9,7 +9,7 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <%= link_to category_task_path(@category, @task), data: { turbo_method: :delete }, class: "btn btn-primary" do %>
+        <%= link_to category_task_path(current_user.username, @category, @task), data: { turbo_method: :delete }, class: "btn btn-primary" do %>
           Continue
         <% end %>
       </div>

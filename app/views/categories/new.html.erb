@@ -4,9 +4,9 @@
   <div class="container p-3 bg-white shadow">
     <div class="d-flex justify-content-between align-items-center">
       <h1>Create Category</h1>
-      <%= link_to "Cancel", dashboard_path, class: "btn btn-outline-primary btn-sm" %>
+      <%= link_to "Cancel", dashboard_path(current_user.username), class: "btn btn-outline-primary btn-sm" %>
     </div>
-    <%= render "form" %>
+    <%= render "form_create" %>
   </div>
 </div>
 

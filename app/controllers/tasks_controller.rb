@@ -15,7 +15,7 @@ class TasksController < ApplicationController
     @task = @category.tasks.build(task_params)
     if @task.save
       flash[:notice] = "Task has been added"
-      redirect_to category_task_path(@category, @task)
+      redirect_to category_task_path(current_user.username, @category, @task)
     else
       render :new, status: :unprocessable_entity
     end
@@ -27,7 +27,7 @@ class TasksController < ApplicationController
   def update
     if @task.update(task_params)
       flash[:notice] = "Task has been updated successfully"
-      redirect_to category_task_path(@category, @task)
+      redirect_to category_task_path(current_user.username, @category, @task)
     else
       render :edit, status: :unprocessable_entity
     end
@@ -36,15 +36,16 @@ class TasksController < ApplicationController
   def destroy
     @task.destroy
     flash[:alert] = "Task has been removed successfully"
-    redirect_to category_path(@category), status: :see_other
+    redirect_to category_path(current_user.username, @category), status: :see_other
   end
 
   def toggle
-    @task.update(completed: !@task.completed)
+    @task.completed = !@task.completed
+    @task.save(validate: false)
     msg = "Task marked "
     @task.completed ? msg += "complete" : msg += "incomplete"
     flash[:notice] = msg
-    redirect_to category_task_path(@category, @task), status: :see_other
+    redirect_to category_task_path(current_user.username, @category, @task), status: :see_other
   end
 
 

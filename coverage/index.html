@@ -14,7 +14,7 @@
       <img src="./assets/0.12.3/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" class="hide">
-      <div class="timestamp">Generated <abbr class="timeago" title="2022-07-22T19:09:03+08:00">2022-07-22T19:09:03+08:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2022-07-23T17:30:51+08:00">2022-07-23T17:30:51+08:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -23,14 +23,14 @@
     <span class="group_name">All Files</span>
     (<span class="covered_percent">
       <span class="red">
-  45.45%
+  47.13%
 </span>
 
      </span>
      covered at
      <span class="covered_strength">
        <span class="red">
-         0.45
+         0.47
        </span>
     </span> hits/line
     )
@@ -43,11 +43,11 @@
   </div>
 
   <div class="t-line-summary">
-    <b>297</b> relevant lines,
-    <span class="green"><b>135</b> lines covered</span> and
-    <span class="red"><b>162</b> lines missed. </span>
+    <b>314</b> relevant lines,
+    <span class="green"><b>148</b> lines covered</span> and
+    <span class="red"><b>166</b> lines missed. </span>
     (<span class="red">
-  45.45%
+  47.13%
 </span>
 )
   </div>
@@ -171,12 +171,12 @@
         
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#b2ee14bd0007e0ce0bdd506c694b8146e4ad4aeb" class="src_link" title="config/initializers/devise.rb">config/initializers/devise.rb</a></td>
-            <td class="green strong cell--number t-file__coverage">100.00 %</td>
-            <td class="cell--number">311</td>
-            <td class="cell--number">13</td>
-            <td class="cell--number">13</td>
-            <td class="cell--number">0</td>
-            <td class="cell--number">1.00</td>
+            <td class="yellow strong cell--number t-file__coverage">82.61 %</td>
+            <td class="cell--number">327</td>
+            <td class="cell--number">23</td>
+            <td class="cell--number">19</td>
+            <td class="cell--number">4</td>
+            <td class="cell--number">0.83</td>
             
           </tr>
         
@@ -216,9 +216,9 @@
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#45f10906af779f8e31f51979776d0cbf4df7450a" class="src_link" title="config/routes.rb">config/routes.rb</a></td>
             <td class="green strong cell--number t-file__coverage">100.00 %</td>
-            <td class="cell--number">9</td>
-            <td class="cell--number">7</td>
-            <td class="cell--number">7</td>
+            <td class="cell--number">19</td>
+            <td class="cell--number">14</td>
+            <td class="cell--number">14</td>
             <td class="cell--number">0</td>
             <td class="cell--number">1.00</td>
             
@@ -2273,8 +2273,8 @@
   <div class="header">
     <h3>config/initializers/devise.rb</h3>
     <h4>
-      <span class="green">
-  100.0%
+      <span class="yellow">
+  82.61%
 </span>
 
       lines covered
@@ -2283,9 +2283,9 @@
     
 
     <div class="t-line-summary">
-      <b>13</b> relevant lines.
-      <span class="green"><b>13</b> lines covered</span> and
-      <span class="red"><b>0</b> lines missed.</span>
+      <b>23</b> relevant lines.
+      <span class="green"><b>19</b> lines covered</span> and
+      <span class="red"><b>4</b> lines missed.</span>
     </div>
 
     
@@ -2324,51 +2324,51 @@
 
             
 
-            <code class="ruby"># Assuming you have not yet modified this file, each configuration option below</code>
+            <code class="ruby">  #! Create custom failure for turbo</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="4">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="4">
+            <span class="hits">1</span>
             
 
-            <code class="ruby"># is set to its default value. Note that some are commented out while others</code>
+            
+
+            <code class="ruby">class TurboFailureApp &lt; Devise::FailureApp</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="5">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="5">
+            <span class="hits">1</span>
             
 
-            <code class="ruby"># are not: uncommented lines are intended to protect your configuration from</code>
+            
+
+            <code class="ruby">  def respond</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="6">
+          <li class="missed" data-hits="0" data-linenumber="6">
             
             
 
             
 
-            <code class="ruby"># breaking changes in upgrades (i.e., in the event that future versions of</code>
+            <code class="ruby">    if request_format == :turbo_stream</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="7">
+          <li class="missed" data-hits="0" data-linenumber="7">
             
             
 
             
 
-            <code class="ruby"># Devise change the default values for those options).</code>
+            <code class="ruby">      redirect</code>
           </li>
         </div>
       
@@ -2379,18 +2379,18 @@
 
             
 
-            <code class="ruby">#</code>
+            <code class="ruby">    else</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="9">
+          <li class="missed" data-hits="0" data-linenumber="9">
             
             
 
             
 
-            <code class="ruby"># Use this hook to configure devise mailer, warden hooks and so forth.</code>
+            <code class="ruby">      super</code>
           </li>
         </div>
       
@@ -2401,18 +2401,18 @@
 
             
 
-            <code class="ruby"># Many of these configuration options can be set straight in your model.</code>
+            <code class="ruby">    end</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="11">
-            <span class="hits">1</span>
+          <li class="never" data-hits="" data-linenumber="11">
+            
             
 
             
 
-            <code class="ruby">Devise.setup do |config|</code>
+            <code class="ruby">  end</code>
           </li>
         </div>
       
@@ -2423,29 +2423,29 @@
 
             
 
-            <code class="ruby">  # The secret key used by Devise. Devise uses this key to generate</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="13">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="13">
+            <span class="hits">1</span>
             
 
-            <code class="ruby">  # random tokens. Changing this key will render invalid all existing</code>
+            
+
+            <code class="ruby">  def skip_format?</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="14">
+          <li class="missed" data-hits="0" data-linenumber="14">
             
             
 
             
 
-            <code class="ruby">  # confirmation, reset password and unlock tokens in the database.</code>
+            <code class="ruby">    %w(html turbo_stream */*).include? request_format.to_s</code>
           </li>
         </div>
       
@@ -2456,7 +2456,7 @@
 
             
 
-            <code class="ruby">  # Devise will use the `secret_key_base` as its `secret_key`</code>
+            <code class="ruby">  end</code>
           </li>
         </div>
       
@@ -2467,7 +2467,7 @@
 
             
 
-            <code class="ruby">  # by default. You can change it below and use your own secret key.</code>
+            <code class="ruby">end</code>
           </li>
         </div>
       
@@ -2478,7 +2478,7 @@
 
             
 
-            <code class="ruby">  # config.secret_key = &#39;c80fc9cd245762bbf32da8fe2ea1958f44dd562c658658bec2b8aba367bb7e7dd07e8db76a305d935ba3a8601034d200f9abd8683692e24520ba0697518fb062&#39;</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -2489,7 +2489,7 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby"># Assuming you have not yet modified this file, each configuration option below</code>
           </li>
         </div>
       
@@ -2500,7 +2500,7 @@
 
             
 
-            <code class="ruby">  # ==&gt; Controller configuration</code>
+            <code class="ruby"># is set to its default value. Note that some are commented out while others</code>
           </li>
         </div>
       
@@ -2511,7 +2511,7 @@
 
             
 
-            <code class="ruby">  # Configure the parent class to the devise controllers.</code>
+            <code class="ruby"># are not: uncommented lines are intended to protect your configuration from</code>
           </li>
         </div>
       
@@ -2522,7 +2522,7 @@
 
             
 
-            <code class="ruby">  # config.parent_controller = &#39;DeviseController&#39;</code>
+            <code class="ruby"># breaking changes in upgrades (i.e., in the event that future versions of</code>
           </li>
         </div>
       
@@ -2533,7 +2533,7 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby"># Devise change the default values for those options).</code>
           </li>
         </div>
       
@@ -2544,7 +2544,7 @@
 
             
 
-            <code class="ruby">  # ==&gt; Mailer Configuration</code>
+            <code class="ruby">#</code>
           </li>
         </div>
       
@@ -2555,7 +2555,7 @@
 
             
 
-            <code class="ruby">  # Configure the e-mail address which will be shown in Devise::Mailer,</code>
+            <code class="ruby"># Use this hook to configure devise mailer, warden hooks and so forth.</code>
           </li>
         </div>
       
@@ -2566,29 +2566,29 @@
 
             
 
-            <code class="ruby">  # note that it will be overwritten if you use your own mailer class</code>
+            <code class="ruby"># Many of these configuration options can be set straight in your model.</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="26">
-            
-            
-
-            
-
-            <code class="ruby">  # with default &quot;from&quot; parameter.</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="27">
+          <li class="covered" data-hits="1" data-linenumber="26">
             <span class="hits">1</span>
             
 
             
 
-            <code class="ruby">  config.mailer_sender = &#39;please-change-me-at-config-initializers-devise@example.com&#39;</code>
+            <code class="ruby">Devise.setup do |config|</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="27">
+            
+            
+
+            
+
+            <code class="ruby">  # The secret key used by Devise. Devise uses this key to generate</code>
           </li>
         </div>
       
@@ -2599,7 +2599,7 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">  # random tokens. Changing this key will render invalid all existing</code>
           </li>
         </div>
       
@@ -2610,7 +2610,7 @@
 
             
 
-            <code class="ruby">  # Configure the class responsible to send e-mails.</code>
+            <code class="ruby">  # confirmation, reset password and unlock tokens in the database.</code>
           </li>
         </div>
       
@@ -2621,7 +2621,7 @@
 
             
 
-            <code class="ruby">  # config.mailer = &#39;Devise::Mailer&#39;</code>
+            <code class="ruby">  # Devise will use the `secret_key_base` as its `secret_key`</code>
           </li>
         </div>
       
@@ -2632,7 +2632,7 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">  # by default. You can change it below and use your own secret key.</code>
           </li>
         </div>
       
@@ -2643,7 +2643,7 @@
 
             
 
-            <code class="ruby">  # Configure the parent class responsible to send e-mails.</code>
+            <code class="ruby">  # config.secret_key = &#39;c80fc9cd245762bbf32da8fe2ea1958f44dd562c658658bec2b8aba367bb7e7dd07e8db76a305d935ba3a8601034d200f9abd8683692e24520ba0697518fb062&#39;</code>
           </li>
         </div>
       
@@ -2654,7 +2654,7 @@
 
             
 
-            <code class="ruby">  # config.parent_mailer = &#39;ActionMailer::Base&#39;</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -2665,7 +2665,7 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">  # ==&gt; Controller configuration</code>
           </li>
         </div>
       
@@ -2676,7 +2676,7 @@
 
             
 
-            <code class="ruby">  # ==&gt; ORM configuration</code>
+            <code class="ruby">  # Configure the parent class to the devise controllers.</code>
           </li>
         </div>
       
@@ -2687,7 +2687,7 @@
 
             
 
-            <code class="ruby">  # Load and configure the ORM. Supports :active_record (default) and</code>
+            <code class="ruby">  # config.parent_controller = &#39;DeviseController&#39;</code>
           </li>
         </div>
       
@@ -2698,7 +2698,7 @@
 
             
 
-            <code class="ruby">  # :mongoid (bson_ext recommended) by default. Other ORMs may be</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -2709,18 +2709,18 @@
 
             
 
-            <code class="ruby">  # available as additional gems.</code>
+            <code class="ruby">  # ==&gt; Mailer Configuration</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="39">
-            <span class="hits">1</span>
+          <li class="never" data-hits="" data-linenumber="39">
+            
             
 
             
 
-            <code class="ruby">  require &#39;devise/orm/active_record&#39;</code>
+            <code class="ruby">  # Configure the e-mail address which will be shown in Devise::Mailer,</code>
           </li>
         </div>
       
@@ -2731,7 +2731,7 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">  # note that it will be overwritten if you use your own mailer class</code>
           </li>
         </div>
       
@@ -2742,18 +2742,18 @@
 
             
 
-            <code class="ruby">  # ==&gt; Configuration for any authentication mechanism</code>
+            <code class="ruby">  # with default &quot;from&quot; parameter.</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="42">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="42">
+            <span class="hits">1</span>
             
 
-            <code class="ruby">  # Configure which keys are used when authenticating a user. The default is</code>
+            
+
+            <code class="ruby">  config.mailer_sender = &#39;please-change-me-at-config-initializers-devise@example.com&#39;</code>
           </li>
         </div>
       
@@ -2764,7 +2764,7 @@
 
             
 
-            <code class="ruby">  # just :email. You can configure it to use [:username, :subdomain], so for</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -2775,7 +2775,7 @@
 
             
 
-            <code class="ruby">  # authenticating a user, both parameters are required. Remember that those</code>
+            <code class="ruby">  # Configure the class responsible to send e-mails.</code>
           </li>
         </div>
       
@@ -2786,7 +2786,7 @@
 
             
 
-            <code class="ruby">  # parameters are used only when authenticating and not when retrieving from</code>
+            <code class="ruby">  # config.mailer = &#39;Devise::Mailer&#39;</code>
           </li>
         </div>
       
@@ -2797,7 +2797,7 @@
 
             
 
-            <code class="ruby">  # session. If you need permissions, you should implement that in a before filter.</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -2808,7 +2808,7 @@
 
             
 
-            <code class="ruby">  # You can also supply a hash where the value is a boolean determining whether</code>
+            <code class="ruby">  # Configure the parent class responsible to send e-mails.</code>
           </li>
         </div>
       
@@ -2819,7 +2819,7 @@
 
             
 
-            <code class="ruby">  # or not authentication should be aborted when the value is not present.</code>
+            <code class="ruby">  # config.parent_mailer = &#39;ActionMailer::Base&#39;</code>
           </li>
         </div>
       
@@ -2830,7 +2830,7 @@
 
             
 
-            <code class="ruby">  # config.authentication_keys = [:email]</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -2841,7 +2841,7 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">  # ==&gt; ORM configuration</code>
           </li>
         </div>
       
@@ -2852,7 +2852,7 @@
 
             
 
-            <code class="ruby">  # Configure parameters from the request object used for authentication. Each entry</code>
+            <code class="ruby">  # Load and configure the ORM. Supports :active_record (default) and</code>
           </li>
         </div>
       
@@ -2863,7 +2863,7 @@
 
             
 
-            <code class="ruby">  # given should be a request method and it will automatically be passed to the</code>
+            <code class="ruby">  # :mongoid (bson_ext recommended) by default. Other ORMs may be</code>
           </li>
         </div>
       
@@ -2874,18 +2874,18 @@
 
             
 
-            <code class="ruby">  # find_for_authentication method and considered in your model lookup. For instance,</code>
+            <code class="ruby">  # available as additional gems.</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="54">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="54">
+            <span class="hits">1</span>
             
 
-            <code class="ruby">  # if you set :request_keys to [:subdomain], :subdomain will be used on authentication.</code>
+            
+
+            <code class="ruby">  require &#39;devise/orm/active_record&#39;</code>
           </li>
         </div>
       
@@ -2896,7 +2896,7 @@
 
             
 
-            <code class="ruby">  # The same considerations mentioned for authentication_keys also apply to request_keys.</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -2907,7 +2907,7 @@
 
             
 
-            <code class="ruby">  # config.request_keys = []</code>
+            <code class="ruby">  # ==&gt; Configuration for any authentication mechanism</code>
           </li>
         </div>
       
@@ -2918,7 +2918,7 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">  # Configure which keys are used when authenticating a user. The default is</code>
           </li>
         </div>
       
@@ -2929,7 +2929,7 @@
 
             
 
-            <code class="ruby">  # Configure which authentication keys should be case-insensitive.</code>
+            <code class="ruby">  # just :email. You can configure it to use [:username, :subdomain], so for</code>
           </li>
         </div>
       
@@ -2940,7 +2940,7 @@
 
             
 
-            <code class="ruby">  # These keys will be downcased upon creating or modifying a user and when used</code>
+            <code class="ruby">  # authenticating a user, both parameters are required. Remember that those</code>
           </li>
         </div>
       
@@ -2951,18 +2951,18 @@
 
             
 
-            <code class="ruby">  # to authenticate or find a user. Default is :email.</code>
+            <code class="ruby">  # parameters are used only when authenticating and not when retrieving from</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="61">
-            <span class="hits">1</span>
+          <li class="never" data-hits="" data-linenumber="61">
+            
             
 
             
 
-            <code class="ruby">  config.case_insensitive_keys = [:email]</code>
+            <code class="ruby">  # session. If you need permissions, you should implement that in a before filter.</code>
           </li>
         </div>
       
@@ -2973,7 +2973,7 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">  # You can also supply a hash where the value is a boolean determining whether</code>
           </li>
         </div>
       
@@ -2984,7 +2984,7 @@
 
             
 
-            <code class="ruby">  # Configure which authentication keys should have whitespace stripped.</code>
+            <code class="ruby">  # or not authentication should be aborted when the value is not present.</code>
           </li>
         </div>
       
@@ -2995,7 +2995,7 @@
 
             
 
-            <code class="ruby">  # These keys will have whitespace before and after removed upon creating or</code>
+            <code class="ruby">  # config.authentication_keys = [:email]</code>
           </li>
         </div>
       
@@ -3006,18 +3006,18 @@
 
             
 
-            <code class="ruby">  # modifying a user and when used to authenticate or find a user. Default is :email.</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="66">
-            <span class="hits">1</span>
+          <li class="never" data-hits="" data-linenumber="66">
+            
             
 
             
 
-            <code class="ruby">  config.strip_whitespace_keys = [:email]</code>
+            <code class="ruby">  # Configure parameters from the request object used for authentication. Each entry</code>
           </li>
         </div>
       
@@ -3028,7 +3028,7 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">  # given should be a request method and it will automatically be passed to the</code>
           </li>
         </div>
       
@@ -3039,7 +3039,7 @@
 
             
 
-            <code class="ruby">  # Tell if authentication through request.params is enabled. True by default.</code>
+            <code class="ruby">  # find_for_authentication method and considered in your model lookup. For instance,</code>
           </li>
         </div>
       
@@ -3050,7 +3050,7 @@
 
             
 
-            <code class="ruby">  # It can be set to an array that will enable params authentication only for the</code>
+            <code class="ruby">  # if you set :request_keys to [:subdomain], :subdomain will be used on authentication.</code>
           </li>
         </div>
       
@@ -3061,7 +3061,7 @@
 
             
 
-            <code class="ruby">  # given strategies, for example, `config.params_authenticatable = [:database]` will</code>
+            <code class="ruby">  # The same considerations mentioned for authentication_keys also apply to request_keys.</code>
           </li>
         </div>
       
@@ -3072,7 +3072,7 @@
 
             
 
-            <code class="ruby">  # enable it only for database (email + password) authentication.</code>
+            <code class="ruby">  # config.request_keys = []</code>
           </li>
         </div>
       
@@ -3083,7 +3083,7 @@
 
             
 
-            <code class="ruby">  # config.params_authenticatable = true</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -3094,7 +3094,7 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">  # Configure which authentication keys should be case-insensitive.</code>
           </li>
         </div>
       
@@ -3105,7 +3105,7 @@
 
             
 
-            <code class="ruby">  # Tell if authentication through HTTP Auth is enabled. False by default.</code>
+            <code class="ruby">  # These keys will be downcased upon creating or modifying a user and when used</code>
           </li>
         </div>
       
@@ -3116,18 +3116,18 @@
 
             
 
-            <code class="ruby">  # It can be set to an array that will enable http authentication only for the</code>
+            <code class="ruby">  # to authenticate or find a user. Default is :email.</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="76">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="76">
+            <span class="hits">1</span>
             
 
-            <code class="ruby">  # given strategies, for example, `config.http_authenticatable = [:database]` will</code>
+            
+
+            <code class="ruby">  config.case_insensitive_keys = [:email]</code>
           </li>
         </div>
       
@@ -3138,7 +3138,7 @@
 
             
 
-            <code class="ruby">  # enable it only for database authentication.</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -3149,7 +3149,7 @@
 
             
 
-            <code class="ruby">  # For API-only applications to support authentication &quot;out-of-the-box&quot;, you will likely want to</code>
+            <code class="ruby">  # Configure which authentication keys should have whitespace stripped.</code>
           </li>
         </div>
       
@@ -3160,7 +3160,7 @@
 
             
 
-            <code class="ruby">  # enable this with :database unless you are using a custom strategy.</code>
+            <code class="ruby">  # These keys will have whitespace before and after removed upon creating or</code>
           </li>
         </div>
       
@@ -3171,18 +3171,18 @@
 
             
 
-            <code class="ruby">  # The supported strategies are:</code>
+            <code class="ruby">  # modifying a user and when used to authenticate or find a user. Default is :email.</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="81">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="81">
+            <span class="hits">1</span>
             
 
-            <code class="ruby">  # :database      = Support basic authentication with authentication key + password</code>
+            
+
+            <code class="ruby">  config.strip_whitespace_keys = [:email]</code>
           </li>
         </div>
       
@@ -3193,7 +3193,7 @@
 
             
 
-            <code class="ruby">  # config.http_authenticatable = false</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -3204,7 +3204,7 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">  # Tell if authentication through request.params is enabled. True by default.</code>
           </li>
         </div>
       
@@ -3215,7 +3215,7 @@
 
             
 
-            <code class="ruby">  # If 401 status code should be returned for AJAX requests. True by default.</code>
+            <code class="ruby">  # It can be set to an array that will enable params authentication only for the</code>
           </li>
         </div>
       
@@ -3226,7 +3226,7 @@
 
             
 
-            <code class="ruby">  # config.http_authenticatable_on_xhr = true</code>
+            <code class="ruby">  # given strategies, for example, `config.params_authenticatable = [:database]` will</code>
           </li>
         </div>
       
@@ -3237,7 +3237,7 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">  # enable it only for database (email + password) authentication.</code>
           </li>
         </div>
       
@@ -3248,7 +3248,7 @@
 
             
 
-            <code class="ruby">  # The realm used in Http Basic Authentication. &#39;Application&#39; by default.</code>
+            <code class="ruby">  # config.params_authenticatable = true</code>
           </li>
         </div>
       
@@ -3259,7 +3259,7 @@
 
             
 
-            <code class="ruby">  # config.http_authentication_realm = &#39;Application&#39;</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -3270,7 +3270,7 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">  # Tell if authentication through HTTP Auth is enabled. False by default.</code>
           </li>
         </div>
       
@@ -3281,7 +3281,7 @@
 
             
 
-            <code class="ruby">  # It will change confirmation, password recovery and other workflows</code>
+            <code class="ruby">  # It can be set to an array that will enable http authentication only for the</code>
           </li>
         </div>
       
@@ -3292,7 +3292,7 @@
 
             
 
-            <code class="ruby">  # to behave the same regardless if the e-mail provided was right or wrong.</code>
+            <code class="ruby">  # given strategies, for example, `config.http_authenticatable = [:database]` will</code>
           </li>
         </div>
       
@@ -3303,7 +3303,7 @@
 
             
 
-            <code class="ruby">  # Does not affect registerable.</code>
+            <code class="ruby">  # enable it only for database authentication.</code>
           </li>
         </div>
       
@@ -3314,7 +3314,7 @@
 
             
 
-            <code class="ruby">  # config.paranoid = true</code>
+            <code class="ruby">  # For API-only applications to support authentication &quot;out-of-the-box&quot;, you will likely want to</code>
           </li>
         </div>
       
@@ -3325,7 +3325,7 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">  # enable this with :database unless you are using a custom strategy.</code>
           </li>
         </div>
       
@@ -3336,7 +3336,7 @@
 
             
 
-            <code class="ruby">  # By default Devise will store the user in session. You can skip storage for</code>
+            <code class="ruby">  # The supported strategies are:</code>
           </li>
         </div>
       
@@ -3347,7 +3347,7 @@
 
             
 
-            <code class="ruby">  # particular strategies by setting this option.</code>
+            <code class="ruby">  # :database      = Support basic authentication with authentication key + password</code>
           </li>
         </div>
       
@@ -3358,7 +3358,7 @@
 
             
 
-            <code class="ruby">  # Notice that if you are skipping storage for all authentication paths, you</code>
+            <code class="ruby">  # config.http_authenticatable = false</code>
           </li>
         </div>
       
@@ -3369,7 +3369,7 @@
 
             
 
-            <code class="ruby">  # may want to disable generating routes to Devise&#39;s sessions controller by</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -3380,18 +3380,18 @@
 
             
 
-            <code class="ruby">  # passing skip: :sessions to `devise_for` in your config/routes.rb</code>
+            <code class="ruby">  # If 401 status code should be returned for AJAX requests. True by default.</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="100">
-            <span class="hits">1</span>
+          <li class="never" data-hits="" data-linenumber="100">
+            
             
 
             
 
-            <code class="ruby">  config.skip_session_storage = [:http_auth]</code>
+            <code class="ruby">  # config.http_authenticatable_on_xhr = true</code>
           </li>
         </div>
       
@@ -3413,7 +3413,7 @@
 
             
 
-            <code class="ruby">  # By default, Devise cleans up the CSRF token on authentication to</code>
+            <code class="ruby">  # The realm used in Http Basic Authentication. &#39;Application&#39; by default.</code>
           </li>
         </div>
       
@@ -3424,7 +3424,7 @@
 
             
 
-            <code class="ruby">  # avoid CSRF token fixation attacks. This means that, when using AJAX</code>
+            <code class="ruby">  # config.http_authentication_realm = &#39;Application&#39;</code>
           </li>
         </div>
       
@@ -3435,7 +3435,7 @@
 
             
 
-            <code class="ruby">  # requests for sign in and sign up, you need to get a new CSRF token</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -3446,7 +3446,7 @@
 
             
 
-            <code class="ruby">  # from the server. You can disable this option at your own risk.</code>
+            <code class="ruby">  # It will change confirmation, password recovery and other workflows</code>
           </li>
         </div>
       
@@ -3457,7 +3457,7 @@
 
             
 
-            <code class="ruby">  # config.clean_up_csrf_token_on_authentication = true</code>
+            <code class="ruby">  # to behave the same regardless if the e-mail provided was right or wrong.</code>
           </li>
         </div>
       
@@ -3468,7 +3468,7 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">  # Does not affect registerable.</code>
           </li>
         </div>
       
@@ -3479,7 +3479,7 @@
 
             
 
-            <code class="ruby">  # When false, Devise will not attempt to reload routes on eager load.</code>
+            <code class="ruby">  # config.paranoid = true</code>
           </li>
         </div>
       
@@ -3490,7 +3490,7 @@
 
             
 
-            <code class="ruby">  # This can reduce the time taken to boot the app but if your application</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -3501,7 +3501,7 @@
 
             
 
-            <code class="ruby">  # requires the Devise mappings to be loaded during boot time the application</code>
+            <code class="ruby">  # By default Devise will store the user in session. You can skip storage for</code>
           </li>
         </div>
       
@@ -3512,7 +3512,7 @@
 
             
 
-            <code class="ruby">  # won&#39;t boot properly.</code>
+            <code class="ruby">  # particular strategies by setting this option.</code>
           </li>
         </div>
       
@@ -3523,7 +3523,7 @@
 
             
 
-            <code class="ruby">  # config.reload_routes = true</code>
+            <code class="ruby">  # Notice that if you are skipping storage for all authentication paths, you</code>
           </li>
         </div>
       
@@ -3534,7 +3534,7 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">  # may want to disable generating routes to Devise&#39;s sessions controller by</code>
           </li>
         </div>
       
@@ -3545,18 +3545,18 @@
 
             
 
-            <code class="ruby">  # ==&gt; Configuration for :database_authenticatable</code>
+            <code class="ruby">  # passing skip: :sessions to `devise_for` in your config/routes.rb</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="115">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="115">
+            <span class="hits">1</span>
             
 
-            <code class="ruby">  # For bcrypt, this is the cost for hashing the password and defaults to 12. If</code>
+            
+
+            <code class="ruby">  config.skip_session_storage = [:http_auth]</code>
           </li>
         </div>
       
@@ -3567,7 +3567,7 @@
 
             
 
-            <code class="ruby">  # using other algorithms, it sets how many times you want the password to be hashed.</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -3578,7 +3578,7 @@
 
             
 
-            <code class="ruby">  # The number of stretches used for generating the hashed password are stored</code>
+            <code class="ruby">  # By default, Devise cleans up the CSRF token on authentication to</code>
           </li>
         </div>
       
@@ -3589,7 +3589,7 @@
 
             
 
-            <code class="ruby">  # with the hashed password. This allows you to change the stretches without</code>
+            <code class="ruby">  # avoid CSRF token fixation attacks. This means that, when using AJAX</code>
           </li>
         </div>
       
@@ -3600,7 +3600,7 @@
 
             
 
-            <code class="ruby">  # invalidating existing passwords.</code>
+            <code class="ruby">  # requests for sign in and sign up, you need to get a new CSRF token</code>
           </li>
         </div>
       
@@ -3611,7 +3611,7 @@
 
             
 
-            <code class="ruby">  #</code>
+            <code class="ruby">  # from the server. You can disable this option at your own risk.</code>
           </li>
         </div>
       
@@ -3622,7 +3622,7 @@
 
             
 
-            <code class="ruby">  # Limiting the stretches to just one in testing will increase the performance of</code>
+            <code class="ruby">  # config.clean_up_csrf_token_on_authentication = true</code>
           </li>
         </div>
       
@@ -3633,7 +3633,7 @@
 
             
 
-            <code class="ruby">  # your test suite dramatically. However, it is STRONGLY RECOMMENDED to not use</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -3644,7 +3644,7 @@
 
             
 
-            <code class="ruby">  # a value less than 10 in other environments. Note that, for bcrypt (the default</code>
+            <code class="ruby">  # When false, Devise will not attempt to reload routes on eager load.</code>
           </li>
         </div>
       
@@ -3655,7 +3655,7 @@
 
             
 
-            <code class="ruby">  # algorithm), the cost increases exponentially with the number of stretches (e.g.</code>
+            <code class="ruby">  # This can reduce the time taken to boot the app but if your application</code>
           </li>
         </div>
       
@@ -3666,18 +3666,18 @@
 
             
 
-            <code class="ruby">  # a value of 20 is already extremely slow: approx. 60 seconds for 1 calculation).</code>
+            <code class="ruby">  # requires the Devise mappings to be loaded during boot time the application</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="126">
-            <span class="hits">1</span>
+          <li class="never" data-hits="" data-linenumber="126">
+            
             
 
             
 
-            <code class="ruby">  config.stretches = Rails.env.test? ? 1 : 12</code>
+            <code class="ruby">  # won&#39;t boot properly.</code>
           </li>
         </div>
       
@@ -3688,7 +3688,7 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">  # config.reload_routes = true</code>
           </li>
         </div>
       
@@ -3699,7 +3699,7 @@
 
             
 
-            <code class="ruby">  # Set up a pepper to generate the hashed password.</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -3710,7 +3710,7 @@
 
             
 
-            <code class="ruby">  # config.pepper = &#39;327244d1bd66bd4944a63c54aa6a9c8a97d354631a61ac9f8d55d3ac16333d4901c4e407854bfae10a6a8720d2883998684512a957abcf5d844febca973d5150&#39;</code>
+            <code class="ruby">  # ==&gt; Configuration for :database_authenticatable</code>
           </li>
         </div>
       
@@ -3721,7 +3721,7 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">  # For bcrypt, this is the cost for hashing the password and defaults to 12. If</code>
           </li>
         </div>
       
@@ -3732,7 +3732,7 @@
 
             
 
-            <code class="ruby">  # Send a notification to the original email when the user&#39;s email is changed.</code>
+            <code class="ruby">  # using other algorithms, it sets how many times you want the password to be hashed.</code>
           </li>
         </div>
       
@@ -3743,7 +3743,7 @@
 
             
 
-            <code class="ruby">  # config.send_email_changed_notification = false</code>
+            <code class="ruby">  # The number of stretches used for generating the hashed password are stored</code>
           </li>
         </div>
       
@@ -3754,7 +3754,7 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">  # with the hashed password. This allows you to change the stretches without</code>
           </li>
         </div>
       
@@ -3765,7 +3765,7 @@
 
             
 
-            <code class="ruby">  # Send a notification email when the user&#39;s password is changed.</code>
+            <code class="ruby">  # invalidating existing passwords.</code>
           </li>
         </div>
       
@@ -3776,7 +3776,7 @@
 
             
 
-            <code class="ruby">  # config.send_password_change_notification = false</code>
+            <code class="ruby">  #</code>
           </li>
         </div>
       
@@ -3787,7 +3787,7 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">  # Limiting the stretches to just one in testing will increase the performance of</code>
           </li>
         </div>
       
@@ -3798,7 +3798,7 @@
 
             
 
-            <code class="ruby">  # ==&gt; Configuration for :confirmable</code>
+            <code class="ruby">  # your test suite dramatically. However, it is STRONGLY RECOMMENDED to not use</code>
           </li>
         </div>
       
@@ -3809,7 +3809,7 @@
 
             
 
-            <code class="ruby">  # A period that the user is allowed to access the website even without</code>
+            <code class="ruby">  # a value less than 10 in other environments. Note that, for bcrypt (the default</code>
           </li>
         </div>
       
@@ -3820,7 +3820,7 @@
 
             
 
-            <code class="ruby">  # confirming their account. For instance, if set to 2.days, the user will be</code>
+            <code class="ruby">  # algorithm), the cost increases exponentially with the number of stretches (e.g.</code>
           </li>
         </div>
       
@@ -3831,18 +3831,18 @@
 
             
 
-            <code class="ruby">  # able to access the website for two days without confirming their account,</code>
+            <code class="ruby">  # a value of 20 is already extremely slow: approx. 60 seconds for 1 calculation).</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="141">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="141">
+            <span class="hits">1</span>
             
 
-            <code class="ruby">  # access will be blocked just in the third day.</code>
+            
+
+            <code class="ruby">  config.stretches = Rails.env.test? ? 1 : 12</code>
           </li>
         </div>
       
@@ -3853,7 +3853,7 @@
 
             
 
-            <code class="ruby">  # You can also set it to nil, which will allow the user to access the website</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -3864,7 +3864,7 @@
 
             
 
-            <code class="ruby">  # without confirming their account.</code>
+            <code class="ruby">  # Set up a pepper to generate the hashed password.</code>
           </li>
         </div>
       
@@ -3875,7 +3875,7 @@
 
             
 
-            <code class="ruby">  # Default is 0.days, meaning the user cannot access the website without</code>
+            <code class="ruby">  # config.pepper = &#39;327244d1bd66bd4944a63c54aa6a9c8a97d354631a61ac9f8d55d3ac16333d4901c4e407854bfae10a6a8720d2883998684512a957abcf5d844febca973d5150&#39;</code>
           </li>
         </div>
       
@@ -3886,7 +3886,7 @@
 
             
 
-            <code class="ruby">  # confirming their account.</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -3897,7 +3897,7 @@
 
             
 
-            <code class="ruby">  # config.allow_unconfirmed_access_for = 2.days</code>
+            <code class="ruby">  # Send a notification to the original email when the user&#39;s email is changed.</code>
           </li>
         </div>
       
@@ -3908,7 +3908,7 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">  # config.send_email_changed_notification = false</code>
           </li>
         </div>
       
@@ -3919,7 +3919,7 @@
 
             
 
-            <code class="ruby">  # A period that the user is allowed to confirm their account before their</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -3930,7 +3930,7 @@
 
             
 
-            <code class="ruby">  # token becomes invalid. For example, if set to 3.days, the user can confirm</code>
+            <code class="ruby">  # Send a notification email when the user&#39;s password is changed.</code>
           </li>
         </div>
       
@@ -3941,7 +3941,7 @@
 
             
 
-            <code class="ruby">  # their account within 3 days after the mail was sent, but on the fourth day</code>
+            <code class="ruby">  # config.send_password_change_notification = false</code>
           </li>
         </div>
       
@@ -3952,7 +3952,7 @@
 
             
 
-            <code class="ruby">  # their account can&#39;t be confirmed with the token any more.</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -3963,7 +3963,7 @@
 
             
 
-            <code class="ruby">  # Default is nil, meaning there is no restriction on how long a user can take</code>
+            <code class="ruby">  # ==&gt; Configuration for :confirmable</code>
           </li>
         </div>
       
@@ -3974,7 +3974,7 @@
 
             
 
-            <code class="ruby">  # before confirming their account.</code>
+            <code class="ruby">  # A period that the user is allowed to access the website even without</code>
           </li>
         </div>
       
@@ -3985,7 +3985,7 @@
 
             
 
-            <code class="ruby">  # config.confirm_within = 3.days</code>
+            <code class="ruby">  # confirming their account. For instance, if set to 2.days, the user will be</code>
           </li>
         </div>
       
@@ -3996,7 +3996,7 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">  # able to access the website for two days without confirming their account,</code>
           </li>
         </div>
       
@@ -4007,7 +4007,7 @@
 
             
 
-            <code class="ruby">  # If true, requires any email changes to be confirmed (exactly the same way as</code>
+            <code class="ruby">  # access will be blocked just in the third day.</code>
           </li>
         </div>
       
@@ -4018,7 +4018,7 @@
 
             
 
-            <code class="ruby">  # initial account confirmation) to be applied. Requires additional unconfirmed_email</code>
+            <code class="ruby">  # You can also set it to nil, which will allow the user to access the website</code>
           </li>
         </div>
       
@@ -4029,7 +4029,7 @@
 
             
 
-            <code class="ruby">  # db field (see migrations). Until confirmed, new email is stored in</code>
+            <code class="ruby">  # without confirming their account.</code>
           </li>
         </div>
       
@@ -4040,18 +4040,18 @@
 
             
 
-            <code class="ruby">  # unconfirmed_email column, and copied to email column on successful confirmation.</code>
+            <code class="ruby">  # Default is 0.days, meaning the user cannot access the website without</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="160">
-            <span class="hits">1</span>
+          <li class="never" data-hits="" data-linenumber="160">
+            
             
 
             
 
-            <code class="ruby">  config.reconfirmable = true</code>
+            <code class="ruby">  # confirming their account.</code>
           </li>
         </div>
       
@@ -4062,7 +4062,7 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">  # config.allow_unconfirmed_access_for = 2.days</code>
           </li>
         </div>
       
@@ -4073,7 +4073,7 @@
 
             
 
-            <code class="ruby">  # Defines which key will be used when confirming an account</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -4084,7 +4084,7 @@
 
             
 
-            <code class="ruby">  # config.confirmation_keys = [:email]</code>
+            <code class="ruby">  # A period that the user is allowed to confirm their account before their</code>
           </li>
         </div>
       
@@ -4095,7 +4095,7 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">  # token becomes invalid. For example, if set to 3.days, the user can confirm</code>
           </li>
         </div>
       
@@ -4106,7 +4106,7 @@
 
             
 
-            <code class="ruby">  # ==&gt; Configuration for :rememberable</code>
+            <code class="ruby">  # their account within 3 days after the mail was sent, but on the fourth day</code>
           </li>
         </div>
       
@@ -4117,7 +4117,7 @@
 
             
 
-            <code class="ruby">  # The time the user will be remembered without asking for credentials again.</code>
+            <code class="ruby">  # their account can&#39;t be confirmed with the token any more.</code>
           </li>
         </div>
       
@@ -4128,7 +4128,7 @@
 
             
 
-            <code class="ruby">  # config.remember_for = 2.weeks</code>
+            <code class="ruby">  # Default is nil, meaning there is no restriction on how long a user can take</code>
           </li>
         </div>
       
@@ -4139,7 +4139,7 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">  # before confirming their account.</code>
           </li>
         </div>
       
@@ -4150,18 +4150,18 @@
 
             
 
-            <code class="ruby">  # Invalidates all the remember me tokens when the user signs out.</code>
+            <code class="ruby">  # config.confirm_within = 3.days</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="170">
-            <span class="hits">1</span>
+          <li class="never" data-hits="" data-linenumber="170">
+            
             
 
             
 
-            <code class="ruby">  config.expire_all_remember_me_on_sign_out = true</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -4172,7 +4172,7 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">  # If true, requires any email changes to be confirmed (exactly the same way as</code>
           </li>
         </div>
       
@@ -4183,7 +4183,7 @@
 
             
 
-            <code class="ruby">  # If true, extends the user&#39;s remember period when remembered via cookie.</code>
+            <code class="ruby">  # initial account confirmation) to be applied. Requires additional unconfirmed_email</code>
           </li>
         </div>
       
@@ -4194,7 +4194,7 @@
 
             
 
-            <code class="ruby">  # config.extend_remember_period = false</code>
+            <code class="ruby">  # db field (see migrations). Until confirmed, new email is stored in</code>
           </li>
         </div>
       
@@ -4205,18 +4205,18 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">  # unconfirmed_email column, and copied to email column on successful confirmation.</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="175">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="175">
+            <span class="hits">1</span>
             
 
-            <code class="ruby">  # Options to be passed to the created cookie. For instance, you can set</code>
+            
+
+            <code class="ruby">  config.reconfirmable = true</code>
           </li>
         </div>
       
@@ -4227,7 +4227,7 @@
 
             
 
-            <code class="ruby">  # secure: true in order to force SSL only cookies.</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -4238,7 +4238,7 @@
 
             
 
-            <code class="ruby">  # config.rememberable_options = {}</code>
+            <code class="ruby">  # Defines which key will be used when confirming an account</code>
           </li>
         </div>
       
@@ -4249,7 +4249,7 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">  # config.confirmation_keys = [:email]</code>
           </li>
         </div>
       
@@ -4260,7 +4260,7 @@
 
             
 
-            <code class="ruby">  # ==&gt; Configuration for :validatable</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -4271,18 +4271,18 @@
 
             
 
-            <code class="ruby">  # Range for password length.</code>
+            <code class="ruby">  # ==&gt; Configuration for :rememberable</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="181">
-            <span class="hits">1</span>
+          <li class="never" data-hits="" data-linenumber="181">
+            
             
 
             
 
-            <code class="ruby">  config.password_length = 6..128</code>
+            <code class="ruby">  # The time the user will be remembered without asking for credentials again.</code>
           </li>
         </div>
       
@@ -4293,7 +4293,7 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">  # config.remember_for = 2.weeks</code>
           </li>
         </div>
       
@@ -4304,7 +4304,7 @@
 
             
 
-            <code class="ruby">  # Email regex used to validate email formats. It simply asserts that</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -4315,29 +4315,29 @@
 
             
 
-            <code class="ruby">  # one (and only one) @ exists in the given string. This is mainly</code>
+            <code class="ruby">  # Invalidates all the remember me tokens when the user signs out.</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="185">
-            
-            
-
-            
-
-            <code class="ruby">  # to give user feedback and not to assert the e-mail validity.</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="186">
+          <li class="covered" data-hits="1" data-linenumber="185">
             <span class="hits">1</span>
             
 
             
 
-            <code class="ruby">  config.email_regexp = /\A[^@\s]+@[^@\s]+\z/</code>
+            <code class="ruby">  config.expire_all_remember_me_on_sign_out = true</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="186">
+            
+            
+
+            
+
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -4348,7 +4348,7 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">  # If true, extends the user&#39;s remember period when remembered via cookie.</code>
           </li>
         </div>
       
@@ -4359,7 +4359,7 @@
 
             
 
-            <code class="ruby">  # ==&gt; Configuration for :timeoutable</code>
+            <code class="ruby">  # config.extend_remember_period = false</code>
           </li>
         </div>
       
@@ -4370,7 +4370,7 @@
 
             
 
-            <code class="ruby">  # The time you want to timeout the user session without activity. After this</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -4381,7 +4381,7 @@
 
             
 
-            <code class="ruby">  # time the user will be asked for credentials again. Default is 30 minutes.</code>
+            <code class="ruby">  # Options to be passed to the created cookie. For instance, you can set</code>
           </li>
         </div>
       
@@ -4392,7 +4392,7 @@
 
             
 
-            <code class="ruby">  # config.timeout_in = 30.minutes</code>
+            <code class="ruby">  # secure: true in order to force SSL only cookies.</code>
           </li>
         </div>
       
@@ -4403,7 +4403,7 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">  # config.rememberable_options = {}</code>
           </li>
         </div>
       
@@ -4414,7 +4414,7 @@
 
             
 
-            <code class="ruby">  # ==&gt; Configuration for :lockable</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -4425,7 +4425,7 @@
 
             
 
-            <code class="ruby">  # Defines which strategy will be used to lock an account.</code>
+            <code class="ruby">  # ==&gt; Configuration for :validatable</code>
           </li>
         </div>
       
@@ -4436,18 +4436,18 @@
 
             
 
-            <code class="ruby">  # :failed_attempts = Locks an account after a number of failed attempts to sign in.</code>
+            <code class="ruby">  # Range for password length.</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="196">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="196">
+            <span class="hits">1</span>
             
 
-            <code class="ruby">  # :none            = No lock strategy. You should handle locking by yourself.</code>
+            
+
+            <code class="ruby">  config.password_length = 6..128</code>
           </li>
         </div>
       
@@ -4458,7 +4458,7 @@
 
             
 
-            <code class="ruby">  # config.lock_strategy = :failed_attempts</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -4469,7 +4469,7 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">  # Email regex used to validate email formats. It simply asserts that</code>
           </li>
         </div>
       
@@ -4480,7 +4480,7 @@
 
             
 
-            <code class="ruby">  # Defines which key will be used when locking and unlocking an account</code>
+            <code class="ruby">  # one (and only one) @ exists in the given string. This is mainly</code>
           </li>
         </div>
       
@@ -4491,18 +4491,18 @@
 
             
 
-            <code class="ruby">  # config.unlock_keys = [:email]</code>
+            <code class="ruby">  # to give user feedback and not to assert the e-mail validity.</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="201">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="201">
+            <span class="hits">1</span>
             
 
-            <code class="ruby"></code>
+            
+
+            <code class="ruby">  config.email_regexp = /\A[^@\s]+@[^@\s]+\z/</code>
           </li>
         </div>
       
@@ -4513,7 +4513,7 @@
 
             
 
-            <code class="ruby">  # Defines which strategy will be used to unlock an account.</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -4524,7 +4524,7 @@
 
             
 
-            <code class="ruby">  # :email = Sends an unlock link to the user email</code>
+            <code class="ruby">  # ==&gt; Configuration for :timeoutable</code>
           </li>
         </div>
       
@@ -4535,7 +4535,7 @@
 
             
 
-            <code class="ruby">  # :time  = Re-enables login after a certain amount of time (see :unlock_in below)</code>
+            <code class="ruby">  # The time you want to timeout the user session without activity. After this</code>
           </li>
         </div>
       
@@ -4546,7 +4546,7 @@
 
             
 
-            <code class="ruby">  # :both  = Enables both strategies</code>
+            <code class="ruby">  # time the user will be asked for credentials again. Default is 30 minutes.</code>
           </li>
         </div>
       
@@ -4557,7 +4557,7 @@
 
             
 
-            <code class="ruby">  # :none  = No unlock strategy. You should handle unlocking by yourself.</code>
+            <code class="ruby">  # config.timeout_in = 30.minutes</code>
           </li>
         </div>
       
@@ -4568,7 +4568,7 @@
 
             
 
-            <code class="ruby">  # config.unlock_strategy = :both</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -4579,7 +4579,7 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">  # ==&gt; Configuration for :lockable</code>
           </li>
         </div>
       
@@ -4590,7 +4590,7 @@
 
             
 
-            <code class="ruby">  # Number of authentication tries before locking an account if lock_strategy</code>
+            <code class="ruby">  # Defines which strategy will be used to lock an account.</code>
           </li>
         </div>
       
@@ -4601,7 +4601,7 @@
 
             
 
-            <code class="ruby">  # is failed attempts.</code>
+            <code class="ruby">  # :failed_attempts = Locks an account after a number of failed attempts to sign in.</code>
           </li>
         </div>
       
@@ -4612,7 +4612,7 @@
 
             
 
-            <code class="ruby">  # config.maximum_attempts = 20</code>
+            <code class="ruby">  # :none            = No lock strategy. You should handle locking by yourself.</code>
           </li>
         </div>
       
@@ -4623,7 +4623,7 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">  # config.lock_strategy = :failed_attempts</code>
           </li>
         </div>
       
@@ -4634,7 +4634,7 @@
 
             
 
-            <code class="ruby">  # Time interval to unlock the account if :time is enabled as unlock_strategy.</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -4645,7 +4645,7 @@
 
             
 
-            <code class="ruby">  # config.unlock_in = 1.hour</code>
+            <code class="ruby">  # Defines which key will be used when locking and unlocking an account</code>
           </li>
         </div>
       
@@ -4656,7 +4656,7 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">  # config.unlock_keys = [:email]</code>
           </li>
         </div>
       
@@ -4667,7 +4667,7 @@
 
             
 
-            <code class="ruby">  # Warn on the last attempt before the account is locked.</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -4678,7 +4678,7 @@
 
             
 
-            <code class="ruby">  # config.last_attempt_warning = true</code>
+            <code class="ruby">  # Defines which strategy will be used to unlock an account.</code>
           </li>
         </div>
       
@@ -4689,7 +4689,7 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">  # :email = Sends an unlock link to the user email</code>
           </li>
         </div>
       
@@ -4700,7 +4700,7 @@
 
             
 
-            <code class="ruby">  # ==&gt; Configuration for :recoverable</code>
+            <code class="ruby">  # :time  = Re-enables login after a certain amount of time (see :unlock_in below)</code>
           </li>
         </div>
       
@@ -4711,7 +4711,7 @@
 
             
 
-            <code class="ruby">  #</code>
+            <code class="ruby">  # :both  = Enables both strategies</code>
           </li>
         </div>
       
@@ -4722,7 +4722,7 @@
 
             
 
-            <code class="ruby">  # Defines which key will be used when recovering the password for an account</code>
+            <code class="ruby">  # :none  = No unlock strategy. You should handle unlocking by yourself.</code>
           </li>
         </div>
       
@@ -4733,7 +4733,7 @@
 
             
 
-            <code class="ruby">  # config.reset_password_keys = [:email]</code>
+            <code class="ruby">  # config.unlock_strategy = :both</code>
           </li>
         </div>
       
@@ -4755,7 +4755,7 @@
 
             
 
-            <code class="ruby">  # Time interval you can reset your password with a reset password key.</code>
+            <code class="ruby">  # Number of authentication tries before locking an account if lock_strategy</code>
           </li>
         </div>
       
@@ -4766,7 +4766,7 @@
 
             
 
-            <code class="ruby">  # Don&#39;t put a too small interval or your users won&#39;t have the time to</code>
+            <code class="ruby">  # is failed attempts.</code>
           </li>
         </div>
       
@@ -4777,18 +4777,18 @@
 
             
 
-            <code class="ruby">  # change their passwords.</code>
+            <code class="ruby">  # config.maximum_attempts = 20</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="227">
-            <span class="hits">1</span>
+          <li class="never" data-hits="" data-linenumber="227">
+            
             
 
             
 
-            <code class="ruby">  config.reset_password_within = 6.hours</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -4799,7 +4799,7 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">  # Time interval to unlock the account if :time is enabled as unlock_strategy.</code>
           </li>
         </div>
       
@@ -4810,7 +4810,7 @@
 
             
 
-            <code class="ruby">  # When set to false, does not sign a user in automatically after their password is</code>
+            <code class="ruby">  # config.unlock_in = 1.hour</code>
           </li>
         </div>
       
@@ -4821,7 +4821,7 @@
 
             
 
-            <code class="ruby">  # reset. Defaults to true, so a user is signed in automatically after a reset.</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -4832,7 +4832,7 @@
 
             
 
-            <code class="ruby">  # config.sign_in_after_reset_password = true</code>
+            <code class="ruby">  # Warn on the last attempt before the account is locked.</code>
           </li>
         </div>
       
@@ -4843,7 +4843,7 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">  # config.last_attempt_warning = true</code>
           </li>
         </div>
       
@@ -4854,7 +4854,7 @@
 
             
 
-            <code class="ruby">  # ==&gt; Configuration for :encryptable</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -4865,7 +4865,7 @@
 
             
 
-            <code class="ruby">  # Allow you to use another hashing or encryption algorithm besides bcrypt (default).</code>
+            <code class="ruby">  # ==&gt; Configuration for :recoverable</code>
           </li>
         </div>
       
@@ -4876,7 +4876,7 @@
 
             
 
-            <code class="ruby">  # You can use :sha1, :sha512 or algorithms from others authentication tools as</code>
+            <code class="ruby">  #</code>
           </li>
         </div>
       
@@ -4887,7 +4887,7 @@
 
             
 
-            <code class="ruby">  # :clearance_sha1, :authlogic_sha512 (then you should set stretches above to 20</code>
+            <code class="ruby">  # Defines which key will be used when recovering the password for an account</code>
           </li>
         </div>
       
@@ -4898,7 +4898,7 @@
 
             
 
-            <code class="ruby">  # for default behavior) and :restful_authentication_sha1 (then you should set</code>
+            <code class="ruby">  # config.reset_password_keys = [:email]</code>
           </li>
         </div>
       
@@ -4909,7 +4909,7 @@
 
             
 
-            <code class="ruby">  # stretches to 10, and copy REST_AUTH_SITE_KEY to pepper).</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -4920,7 +4920,7 @@
 
             
 
-            <code class="ruby">  #</code>
+            <code class="ruby">  # Time interval you can reset your password with a reset password key.</code>
           </li>
         </div>
       
@@ -4931,7 +4931,7 @@
 
             
 
-            <code class="ruby">  # Require the `devise-encryptable` gem when using anything other than bcrypt</code>
+            <code class="ruby">  # Don&#39;t put a too small interval or your users won&#39;t have the time to</code>
           </li>
         </div>
       
@@ -4942,18 +4942,18 @@
 
             
 
-            <code class="ruby">  # config.encryptor = :sha512</code>
+            <code class="ruby">  # change their passwords.</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="242">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="242">
+            <span class="hits">1</span>
             
 
-            <code class="ruby"></code>
+            
+
+            <code class="ruby">  config.reset_password_within = 6.hours</code>
           </li>
         </div>
       
@@ -4964,7 +4964,7 @@
 
             
 
-            <code class="ruby">  # ==&gt; Scopes configuration</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -4975,7 +4975,7 @@
 
             
 
-            <code class="ruby">  # Turn scoped views on. Before rendering &quot;sessions/new&quot;, it will first check for</code>
+            <code class="ruby">  # When set to false, does not sign a user in automatically after their password is</code>
           </li>
         </div>
       
@@ -4986,7 +4986,7 @@
 
             
 
-            <code class="ruby">  # &quot;users/sessions/new&quot;. It&#39;s turned off by default because it&#39;s slower if you</code>
+            <code class="ruby">  # reset. Defaults to true, so a user is signed in automatically after a reset.</code>
           </li>
         </div>
       
@@ -4997,7 +4997,7 @@
 
             
 
-            <code class="ruby">  # are using only default views.</code>
+            <code class="ruby">  # config.sign_in_after_reset_password = true</code>
           </li>
         </div>
       
@@ -5008,7 +5008,7 @@
 
             
 
-            <code class="ruby">  # config.scoped_views = false</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -5019,7 +5019,7 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">  # ==&gt; Configuration for :encryptable</code>
           </li>
         </div>
       
@@ -5030,7 +5030,7 @@
 
             
 
-            <code class="ruby">  # Configure the default scope given to Warden. By default it&#39;s the first</code>
+            <code class="ruby">  # Allow you to use another hashing or encryption algorithm besides bcrypt (default).</code>
           </li>
         </div>
       
@@ -5041,7 +5041,7 @@
 
             
 
-            <code class="ruby">  # devise role declared in your routes (usually :user).</code>
+            <code class="ruby">  # You can use :sha1, :sha512 or algorithms from others authentication tools as</code>
           </li>
         </div>
       
@@ -5052,7 +5052,7 @@
 
             
 
-            <code class="ruby">  # config.default_scope = :user</code>
+            <code class="ruby">  # :clearance_sha1, :authlogic_sha512 (then you should set stretches above to 20</code>
           </li>
         </div>
       
@@ -5063,7 +5063,7 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">  # for default behavior) and :restful_authentication_sha1 (then you should set</code>
           </li>
         </div>
       
@@ -5074,7 +5074,7 @@
 
             
 
-            <code class="ruby">  # Set this configuration to false if you want /users/sign_out to sign out</code>
+            <code class="ruby">  # stretches to 10, and copy REST_AUTH_SITE_KEY to pepper).</code>
           </li>
         </div>
       
@@ -5085,7 +5085,7 @@
 
             
 
-            <code class="ruby">  # only the current scope. By default, Devise signs out all scopes.</code>
+            <code class="ruby">  #</code>
           </li>
         </div>
       
@@ -5096,7 +5096,7 @@
 
             
 
-            <code class="ruby">  # config.sign_out_all_scopes = true</code>
+            <code class="ruby">  # Require the `devise-encryptable` gem when using anything other than bcrypt</code>
           </li>
         </div>
       
@@ -5107,7 +5107,7 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">  # config.encryptor = :sha512</code>
           </li>
         </div>
       
@@ -5118,7 +5118,7 @@
 
             
 
-            <code class="ruby">  # ==&gt; Navigation configuration</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -5129,7 +5129,7 @@
 
             
 
-            <code class="ruby">  # Lists the formats that should be treated as navigational. Formats like</code>
+            <code class="ruby">  # ==&gt; Scopes configuration</code>
           </li>
         </div>
       
@@ -5140,7 +5140,7 @@
 
             
 
-            <code class="ruby">  # :html, should redirect to the sign in page when the user does not have</code>
+            <code class="ruby">  # Turn scoped views on. Before rendering &quot;sessions/new&quot;, it will first check for</code>
           </li>
         </div>
       
@@ -5151,7 +5151,7 @@
 
             
 
-            <code class="ruby">  # access, but formats like :xml or :json, should return 401.</code>
+            <code class="ruby">  # &quot;users/sessions/new&quot;. It&#39;s turned off by default because it&#39;s slower if you</code>
           </li>
         </div>
       
@@ -5162,7 +5162,7 @@
 
             
 
-            <code class="ruby">  #</code>
+            <code class="ruby">  # are using only default views.</code>
           </li>
         </div>
       
@@ -5173,7 +5173,7 @@
 
             
 
-            <code class="ruby">  # If you have any extra navigational formats, like :iphone or :mobile, you</code>
+            <code class="ruby">  # config.scoped_views = false</code>
           </li>
         </div>
       
@@ -5184,7 +5184,7 @@
 
             
 
-            <code class="ruby">  # should add them to the navigational formats lists.</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -5195,7 +5195,7 @@
 
             
 
-            <code class="ruby">  #</code>
+            <code class="ruby">  # Configure the default scope given to Warden. By default it&#39;s the first</code>
           </li>
         </div>
       
@@ -5206,7 +5206,7 @@
 
             
 
-            <code class="ruby">  # The &quot;*/*&quot; below is required to match Internet Explorer requests.</code>
+            <code class="ruby">  # devise role declared in your routes (usually :user).</code>
           </li>
         </div>
       
@@ -5217,7 +5217,7 @@
 
             
 
-            <code class="ruby">  # config.navigational_formats = [&#39;*/*&#39;, :html]</code>
+            <code class="ruby">  # config.default_scope = :user</code>
           </li>
         </div>
       
@@ -5239,18 +5239,18 @@
 
             
 
-            <code class="ruby">  # The default HTTP method used to sign out a resource. Default is :delete.</code>
+            <code class="ruby">  # Set this configuration to false if you want /users/sign_out to sign out</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="269">
-            <span class="hits">1</span>
+          <li class="never" data-hits="" data-linenumber="269">
+            
             
 
             
 
-            <code class="ruby">  config.sign_out_via = :delete</code>
+            <code class="ruby">  # only the current scope. By default, Devise signs out all scopes.</code>
           </li>
         </div>
       
@@ -5261,7 +5261,7 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">  # config.sign_out_all_scopes = true</code>
           </li>
         </div>
       
@@ -5272,7 +5272,7 @@
 
             
 
-            <code class="ruby">  # ==&gt; OmniAuth</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -5283,7 +5283,7 @@
 
             
 
-            <code class="ruby">  # Add a new OmniAuth provider. Check the wiki for more information on setting</code>
+            <code class="ruby">  # ==&gt; Navigation configuration</code>
           </li>
         </div>
       
@@ -5294,7 +5294,7 @@
 
             
 
-            <code class="ruby">  # up on your models and hooks.</code>
+            <code class="ruby">  # Lists the formats that should be treated as navigational. Formats like</code>
           </li>
         </div>
       
@@ -5305,7 +5305,7 @@
 
             
 
-            <code class="ruby">  # config.omniauth :github, &#39;APP_ID&#39;, &#39;APP_SECRET&#39;, scope: &#39;user,public_repo&#39;</code>
+            <code class="ruby">  # :html, should redirect to the sign in page when the user does not have</code>
           </li>
         </div>
       
@@ -5316,7 +5316,7 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">  # access, but formats like :xml or :json, should return 401.</code>
           </li>
         </div>
       
@@ -5327,7 +5327,7 @@
 
             
 
-            <code class="ruby">  # ==&gt; Warden configuration</code>
+            <code class="ruby">  #</code>
           </li>
         </div>
       
@@ -5338,7 +5338,7 @@
 
             
 
-            <code class="ruby">  # If you want to use other strategies, that are not supported by Devise, or</code>
+            <code class="ruby">  # If you have any extra navigational formats, like :iphone or :mobile, you</code>
           </li>
         </div>
       
@@ -5349,7 +5349,7 @@
 
             
 
-            <code class="ruby">  # change the failure app, you can configure them inside the config.warden block.</code>
+            <code class="ruby">  # should add them to the navigational formats lists.</code>
           </li>
         </div>
       
@@ -5371,18 +5371,18 @@
 
             
 
-            <code class="ruby">  # config.warden do |manager|</code>
+            <code class="ruby">  # The &quot;*/*&quot; below is required to match Internet Explorer requests.</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="281">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="281">
+            <span class="hits">1</span>
             
 
-            <code class="ruby">  #   manager.intercept_401 = false</code>
+            
+
+            <code class="ruby">  config.navigational_formats = [&#39;*/*&#39;, :html, :turbo_stream]</code>
           </li>
         </div>
       
@@ -5393,7 +5393,7 @@
 
             
 
-            <code class="ruby">  #   manager.default_strategies(scope: :user).unshift :some_external_strategy</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -5404,18 +5404,18 @@
 
             
 
-            <code class="ruby">  # end</code>
+            <code class="ruby">  # The default HTTP method used to sign out a resource. Default is :delete.</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="284">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="284">
+            <span class="hits">1</span>
             
 
-            <code class="ruby"></code>
+            
+
+            <code class="ruby">  config.sign_out_via = :delete</code>
           </li>
         </div>
       
@@ -5426,7 +5426,7 @@
 
             
 
-            <code class="ruby">  # ==&gt; Mountable engine configurations</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -5437,7 +5437,7 @@
 
             
 
-            <code class="ruby">  # When using Devise inside an engine, let&#39;s call it `MyEngine`, and this engine</code>
+            <code class="ruby">  # ==&gt; OmniAuth</code>
           </li>
         </div>
       
@@ -5448,7 +5448,7 @@
 
             
 
-            <code class="ruby">  # is mountable, there are some extra configurations to be taken into account.</code>
+            <code class="ruby">  # Add a new OmniAuth provider. Check the wiki for more information on setting</code>
           </li>
         </div>
       
@@ -5459,7 +5459,7 @@
 
             
 
-            <code class="ruby">  # The following options are available, assuming the engine is mounted as:</code>
+            <code class="ruby">  # up on your models and hooks.</code>
           </li>
         </div>
       
@@ -5470,7 +5470,7 @@
 
             
 
-            <code class="ruby">  #</code>
+            <code class="ruby">  # config.omniauth :github, &#39;APP_ID&#39;, &#39;APP_SECRET&#39;, scope: &#39;user,public_repo&#39;</code>
           </li>
         </div>
       
@@ -5481,7 +5481,7 @@
 
             
 
-            <code class="ruby">  #     mount MyEngine, at: &#39;/my_engine&#39;</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -5492,7 +5492,7 @@
 
             
 
-            <code class="ruby">  #</code>
+            <code class="ruby">  # ==&gt; Warden configuration</code>
           </li>
         </div>
       
@@ -5503,7 +5503,7 @@
 
             
 
-            <code class="ruby">  # The router that invoked `devise_for`, in the example above, would be:</code>
+            <code class="ruby">  # If you want to use other strategies, that are not supported by Devise, or</code>
           </li>
         </div>
       
@@ -5514,7 +5514,7 @@
 
             
 
-            <code class="ruby">  # config.router_name = :my_engine</code>
+            <code class="ruby">  # change the failure app, you can configure them inside the config.warden block.</code>
           </li>
         </div>
       
@@ -5530,24 +5530,24 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="295">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="295">
+            <span class="hits">1</span>
             
 
-            <code class="ruby">  # When using OmniAuth, Devise cannot automatically set OmniAuth path,</code>
+            
+
+            <code class="ruby">  config.warden do |manager|</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="296">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="296">
+            <span class="hits">1</span>
             
 
-            <code class="ruby">  # so you need to do it manually. For the users scope, it would be:</code>
+            
+
+            <code class="ruby">    manager.failure_app = TurboFailureApp</code>
           </li>
         </div>
       
@@ -5558,7 +5558,7 @@
 
             
 
-            <code class="ruby">  # config.omniauth_path_prefix = &#39;/my_engine/users/auth&#39;</code>
+            <code class="ruby">  #   manager.intercept_401 = false</code>
           </li>
         </div>
       
@@ -5569,7 +5569,7 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">  #   manager.default_strategies(scope: :user).unshift :some_external_strategy</code>
           </li>
         </div>
       
@@ -5580,7 +5580,7 @@
 
             
 
-            <code class="ruby">  # ==&gt; Turbolinks configuration</code>
+            <code class="ruby">  end</code>
           </li>
         </div>
       
@@ -5591,7 +5591,7 @@
 
             
 
-            <code class="ruby">  # If your app is using Turbolinks, Turbolinks::Controller needs to be included to make redirection work correctly:</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -5602,7 +5602,7 @@
 
             
 
-            <code class="ruby">  #</code>
+            <code class="ruby">  # ==&gt; Mountable engine configurations</code>
           </li>
         </div>
       
@@ -5613,7 +5613,7 @@
 
             
 
-            <code class="ruby">  # ActiveSupport.on_load(:devise_failure_app) do</code>
+            <code class="ruby">  # When using Devise inside an engine, let&#39;s call it `MyEngine`, and this engine</code>
           </li>
         </div>
       
@@ -5624,7 +5624,7 @@
 
             
 
-            <code class="ruby">  #   include Turbolinks::Controller</code>
+            <code class="ruby">  # is mountable, there are some extra configurations to be taken into account.</code>
           </li>
         </div>
       
@@ -5635,7 +5635,7 @@
 
             
 
-            <code class="ruby">  # end</code>
+            <code class="ruby">  # The following options are available, assuming the engine is mounted as:</code>
           </li>
         </div>
       
@@ -5646,7 +5646,7 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">  #</code>
           </li>
         </div>
       
@@ -5657,7 +5657,7 @@
 
             
 
-            <code class="ruby">  # ==&gt; Configuration for :registerable</code>
+            <code class="ruby">  #     mount MyEngine, at: &#39;/my_engine&#39;</code>
           </li>
         </div>
       
@@ -5668,7 +5668,7 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">  #</code>
           </li>
         </div>
       
@@ -5679,7 +5679,7 @@
 
             
 
-            <code class="ruby">  # When set to false, does not sign a user in automatically after their password is</code>
+            <code class="ruby">  # The router that invoked `devise_for`, in the example above, would be:</code>
           </li>
         </div>
       
@@ -5690,7 +5690,7 @@
 
             
 
-            <code class="ruby">  # changed. Defaults to true, so a user is signed in automatically after changing a password.</code>
+            <code class="ruby">  # config.router_name = :my_engine</code>
           </li>
         </div>
       
@@ -5701,12 +5701,188 @@
 
             
 
-            <code class="ruby">  # config.sign_in_after_change_password = true</code>
+            <code class="ruby">  #</code>
           </li>
         </div>
       
         <div>
           <li class="never" data-hits="" data-linenumber="311">
+            
+            
+
+            
+
+            <code class="ruby">  # When using OmniAuth, Devise cannot automatically set OmniAuth path,</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="312">
+            
+            
+
+            
+
+            <code class="ruby">  # so you need to do it manually. For the users scope, it would be:</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="313">
+            
+            
+
+            
+
+            <code class="ruby">  # config.omniauth_path_prefix = &#39;/my_engine/users/auth&#39;</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="314">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="315">
+            
+            
+
+            
+
+            <code class="ruby">  # ==&gt; Turbolinks configuration</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="316">
+            
+            
+
+            
+
+            <code class="ruby">  # If your app is using Turbolinks, Turbolinks::Controller needs to be included to make redirection work correctly:</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="317">
+            
+            
+
+            
+
+            <code class="ruby">  #</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="318">
+            
+            
+
+            
+
+            <code class="ruby">  # ActiveSupport.on_load(:devise_failure_app) do</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="319">
+            
+            
+
+            
+
+            <code class="ruby">  #   include Turbolinks::Controller</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="320">
+            
+            
+
+            
+
+            <code class="ruby">  # end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="321">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="322">
+            
+            
+
+            
+
+            <code class="ruby">  # ==&gt; Configuration for :registerable</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="323">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="324">
+            
+            
+
+            
+
+            <code class="ruby">  # When set to false, does not sign a user in automatically after their password is</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="325">
+            
+            
+
+            
+
+            <code class="ruby">  # changed. Defaults to true, so a user is signed in automatically after changing a password.</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="326">
+            
+            
+
+            
+
+            <code class="ruby">  # config.sign_in_after_change_password = true</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="327">
             
             
 
@@ -6213,8 +6389,8 @@
     
 
     <div class="t-line-summary">
-      <b>7</b> relevant lines.
-      <span class="green"><b>7</b> lines covered</span> and
+      <b>14</b> relevant lines.
+      <span class="green"><b>14</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
 
@@ -6243,7 +6419,7 @@
 
             
 
-            <code class="ruby">  devise_for :users</code>
+            <code class="ruby">  root &quot;pages#home&quot;</code>
           </li>
         </div>
       
@@ -6254,7 +6430,7 @@
 
             
 
-            <code class="ruby">  root &quot;pages#home&quot;</code>
+            <code class="ruby">  devise_for :users, module: &quot;users&quot;, skip: [:sessions]</code>
           </li>
         </div>
       
@@ -6265,7 +6441,7 @@
 
             
 
-            <code class="ruby">  get &quot;/dashboard&quot; =&gt; &quot;pages#dashboard&quot;</code>
+            <code class="ruby">  devise_scope :user do</code>
           </li>
         </div>
       
@@ -6276,7 +6452,7 @@
 
             
 
-            <code class="ruby">  resources :categories, except: [:index] do</code>
+            <code class="ruby">    get &quot;login&quot; =&gt; &quot;users/sessions#new&quot;, as: :new_user_session</code>
           </li>
         </div>
       
@@ -6287,7 +6463,7 @@
 
             
 
-            <code class="ruby">    resources :tasks, except: [:index]</code>
+            <code class="ruby">    post &quot;login&quot; =&gt; &quot;users/sessions#create&quot;, as: :user_session</code>
           </li>
         </div>
       
@@ -6298,12 +6474,34 @@
 
             
 
-            <code class="ruby">    patch &quot;/tasks/:id/toggle&quot; =&gt; &quot;tasks#toggle&quot;, as: :task_toggle</code>
+            <code class="ruby">    delete &quot;logout&quot; =&gt; &quot;users/sessions#destroy&quot;, as: :destroy_user_session</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="8">
+          <li class="covered" data-hits="1" data-linenumber="8">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    get &quot;register&quot; =&gt; &quot;users/registrations#new&quot;, as: :register</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="9">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    get &quot;:username/profile&quot; =&gt; &quot;users/registrations#edit&quot;, as: :profile_edit</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="10">
             
             
 
@@ -6314,7 +6512,95 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="9">
+          <li class="covered" data-hits="1" data-linenumber="11">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  scope &quot;:username&quot; do</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="12">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    get &quot;dashboard&quot; =&gt; &quot;pages#dashboard&quot;</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="13">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    resources :categories, except: [:index] do</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="14">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">      resources :tasks, except: [:index]</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="15">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">      patch &quot;/tasks/:id/toggle&quot; =&gt; &quot;tasks#toggle&quot;, as: :task_toggle</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="16">
+            
+            
+
+            
+
+            <code class="ruby">    end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="17">
+            
+            
+
+            
+
+            <code class="ruby">  end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="18">
+            
+            
+
+            
+
+            <code class="ruby">  </code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="19">
             
             
 

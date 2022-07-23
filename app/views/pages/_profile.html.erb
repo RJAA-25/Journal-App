@@ -8,7 +8,7 @@
     <div class="col px-4 border-start border-2 border-secondary ">
       <p class="fw-bold fs-4 mb-0 col-auto"><%= current_user.first_name.strip %> <%= current_user.last_name.strip %></p>
       <p class="text-muted fs-5 col">@ <%= current_user.username.strip %></p>
-      <% if current_user.bio %>
+      <% unless current_user.bio.empty? %>
         <p class="d-none d-xl-block fw-light fs-6 col-12"><%= current_user.bio %></p>
       <% else %>
         <p class="d-none d-xl-block text-muted fs-6 col-12">Tell us something about yourself!</p>
