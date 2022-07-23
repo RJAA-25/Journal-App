@@ -1,0 +1,18 @@
+<div class="container mb-4 shadow bg-white">
+  <div class="row py-1 d-flex align-items-center">
+    <%# <div class="col-3 col-lg-2 p-3 d-flex justify-content-center align-items-center"> %>
+      <%= link_to profile_edit_path(current_user.username), class: "col-3 col-lg-2 p-3 d-flex justify-content-center align-items-center" do %>
+      <img class="img-fluid rounded-circle" src="https://avatars.dicebear.com/api/big-smile/<%= current_user.username %>.svg?backgroundColor=%23540d6e" alt="Default Avatar">
+      <% end %>
+    <%# </div> %>
+    <div class="col px-4 border-start border-2 border-secondary ">
+      <p class="fw-bold fs-4 mb-0 col-auto"><%= current_user.first_name.strip %> <%= current_user.last_name.strip %></p>
+      <p class="text-muted fs-5 col">@ <%= current_user.username.strip %></p>
+      <% if current_user.bio %>
+        <p class="d-none d-xl-block fw-light fs-6 col-12"><%= current_user.bio %></p>
+      <% else %>
+        <p class="d-none d-xl-block text-muted fs-6 col-12">Tell us something about yourself!</p>
+      <% end %>
+    </div>
+  </div>
+</div>
