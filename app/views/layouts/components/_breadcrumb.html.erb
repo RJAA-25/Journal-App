@@ -1,13 +1,16 @@
 <div class="container pt-3 px-3 border-2 border-bottom border-secondary bg-white sticky-top">
   <div aria-label="breadcrumb">
     <ol class="breadcrumb">
-      <li class="breadcrumb-item <%= "active" if !category && !task %>">
-        <% if !category && !task %>
+      <li class="breadcrumb-item <%= "active" if !profile && !category && !task %>">
+        <% if !profile && !category && !task %>
           Dashboard
         <% else %>
           <%= link_to "Dashboard", dashboard_path(current_user.username) %>
         <% end %>
       </li>
+      <% if profile %>
+        <li class="breadcrumb-item <%= "active" if !category && !task %>">Profile</li>
+      <% end %>
       <% if category %>
         <li class="breadcrumb-item <%= "active" if !task %>">
           <% if !task %>
@@ -18,9 +21,7 @@
         </li>
       <% end %>
       <% if task %>
-        <li class="breadcrumb-item active">
-          Task
-        </li>
+        <li class="breadcrumb-item active">Task</li>
       <% end %>
     </ol>
   </div>
