@@ -1,0 +1,16 @@
+<div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="deleteModalLabel">Delete Account</h5>
+      </div>
+      <div class="modal-body">
+        <p>This will delete the current account and its associated categories and tasks. Proceed?</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <%= link_to "Continue", registration_path(resource_name), data: { turbo_method: :delete }, class: "btn btn-primary" %>
+      </div>
+    </div>
+  </div>
+</div>

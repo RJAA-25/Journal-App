@@ -1,0 +1,37 @@
+<div class="modal fade" id="changeModal" tabindex="-1" aria-labelledby="changeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="changeModalLabel">Change Password</h5>
+      </div>
+      <div class="modal-body">
+        <div class="">
+          <%= f.label :password, class: "form-label" %>
+          <%= f.password_field :password, autocomplete: "new-password", class: "form-control" %>
+          <div class="container p-2 <%= "d-none" if !resource.errors.any? %>">
+            <% resource.errors.full_messages_for(:password).each do |msg| %>
+              <p class="m-0 text-danger"><%= msg %></p>
+            <% end %>
+          </div>
+        </div>
+
+        <div class="">
+          <%= f.label :password_confirmation, class: "form-label" %>
+          <%= f.password_field :password_confirmation, autocomplete: "new-password", class: "form-control" %>
+          <div class="container p-2 <%= "d-none" if !resource.errors.any? %>">
+            <% resource.errors.full_messages_for(:password_confirmation).each do |msg| %>
+              <p class="m-0 text-danger"><%= msg %></p>
+            <% end %>
+          </div>
+        </div>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#saveModal">
+          Update Profile
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

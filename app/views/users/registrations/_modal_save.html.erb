@@ -1,0 +1,23 @@
+<div class="modal fade" id="saveModal" tabindex="-1" aria-labelledby="saveModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="saveModalLabel">Update Profile</h5>
+      </div>
+      <div class="modal-body">
+        <p class="text-muted">Enter current password to save profile changes</p>
+        <%= f.label :current_password, class: "form-label"%>
+        <%= f.password_field :current_password, autocomplete: "current-password", class: "form-control" %>
+        <div class="container p-2 <%= "d-none" if !resource.errors.any? %>">
+          <% resource.errors.full_messages_for(:current_password).each do |msg| %>
+            <p class="m-0 text-danger"><%= msg %></p>
+          <% end %>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <%= f.submit "Save Changes", class: "btn btn-primary" %>
+      </div>
+    </div>
+  </div>
+</div>
