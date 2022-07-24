@@ -2,9 +2,8 @@ require "test_helper"
 
 class CategoryTest < ActiveSupport::TestCase
   setup do
-    @new_category = Category.create(name: "Example", description: "A description")
-    @new_task = Task.create(name:"Task #1", details: "A task detail", deadline: DateTime.now + 2 , category_id: Category.last.id)
-    @category = Category.new(name: "Some Name", description: "Some description")
+    @user = User.create(first_name: "First", last_name: "Last", username: "username", email: "username@email.com ", password: "password")
+    @category = Category.new(name: "Some Name", description: "Some description", user_id: @user.id)
   end
 
   # :name attribute tests
@@ -53,16 +52,33 @@ class CategoryTest < ActiveSupport::TestCase
     assert @category.save
   end
 
-  # Model Associations
+
+  # Model Association
+  # Category - User
+  test "should get details of parent user" do
+    @category.save
+    assert_equal @category.user.email, "username@email.com"
+    assert_equal @category.user.username, "username"
+  end
 
   # Category - Task
   test "should get task count under a category" do
     @category.save
-    assert_equal @category.tasks.count, 0
+    @task = Task.create(name:"Task #1", details: "A detail", deadline: DateTime.now + 1.hour , category_id: @category.id)
+    assert_equal @category.tasks.count, 1
   end
     
   test "should get task details under a category" do
-    @task = Category.last.tasks.last
-    assert_equal @task.name, "Task #1"
+    @category.save
+    @task = Task.create(name:"Task #1", details: "A detail", deadline: DateTime.now + 1.hour , category_id: @category.id)
+    assert_equal @category.tasks.last.name, "Task #1"
+  end
+
+  test "should destory associated tasks when deleted" do
+    @category.save
+    @task = Task.create(name:"Task #1", details: "A detail", deadline: DateTime.now + 1.hour , category_id: @category.id)
+    assert_difference "Task.count", -1 do
+      @category.destroy
+    end
   end
 end

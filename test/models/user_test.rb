@@ -83,7 +83,7 @@ class UserTest < ActiveSupport::TestCase
     @user.save
     @category = Category.create(name: "Category", description: "A description", user_id: @user.id)
     assert_equal @user.tasks.count, 0
-
+    
     @task= Task.create(name: "Task#1", details: "A detail", deadline: DateTime.current + 1.hour, category_id: @category.id)
     assert_equal @user.tasks.count, 1
   end
@@ -93,8 +93,6 @@ class UserTest < ActiveSupport::TestCase
     @user.save
     @category = Category.create(name: "Category", description: "A description", user_id: @user.id)
     @task = Task.create(name: "Task#1", details: "A detail", deadline: DateTime.current + 1.hour, category_id: @category.id)
-
-    # @user.destroy
     assert_difference "User.count", -1, "Category.count", -1, "Task.count", -1  do
       @user.destroy
     end
