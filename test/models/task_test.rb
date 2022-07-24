@@ -2,7 +2,8 @@ require "test_helper"
 
 class TaskTest < ActiveSupport::TestCase
   setup do
-    @category = Category.create(name: "Example", description: "A description")
+    @user = User.create(first_name: "First", last_name: "Last", username: "username", email: "username@email.com ", password: "password")
+    @category = Category.create(name: "Example", description: "A description", user_id: @user.id)
     @task = Task.new(name: "Task", details: "Some task details", deadline: DateTime.now + 1, category_id: @category.id)
   end
 
@@ -47,16 +48,23 @@ class TaskTest < ActiveSupport::TestCase
     @task.completed = nil
     assert_not @task.save
   end
-  
+
   # :overdue attribute tests
   test "should not save when :overdue is nil" do
     @task.overdue = nil
     assert_not @task.save
   end
 
-  # Model Associations
 
-  # Category - Task
+  # Model Associations
+  # Task - User
+  test "should get details of user parent" do
+    @task.save
+    assert_equal @task.category.user.username, "username"
+    assert_equal @task.category.user.email, "username@email.com"
+  end
+
+  # Task - Category
   test "should get details of category parent" do
     @task.save
     assert_equal @task.category.name, "Example"
