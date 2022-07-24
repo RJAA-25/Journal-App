@@ -26,10 +26,8 @@ class Users::RegistrationsController < Devise::RegistrationsController
   end
 
   def edit
-    if params[:username] == current_user.username
-      render :edit
-    else
-      flash[:alert] = "You do not have access to this account"
+    if params[:username] != current_user.username
+      flash[:alert] = "Forbidden action. You only have access to your account"
       redirect_to dashboard_path(current_user.username)
     end
   end

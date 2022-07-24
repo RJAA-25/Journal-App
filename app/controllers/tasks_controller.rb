@@ -1,4 +1,5 @@
 class TasksController < ApplicationController
+  before_action :authenticate_user!
   before_action :toggle_overdue, only: [:show]
   before_action :set_category
   before_action :set_task, only: [:show, :edit, :update, :destroy, :toggle]
