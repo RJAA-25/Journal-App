@@ -39,6 +39,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
       bypass_sign_in resource, scope: resource_name if sign_in_after_change_password?
       respond_with resource, location: after_update_path_for(resource)
     else
+      flash[:alert] = "Oops, something went wrong. Fill out the form correctly."
       clean_up_passwords resource
       set_minimum_password_length
       respond_with resource, status: :unprocessable_entity
@@ -71,6 +72,6 @@ class Users::RegistrationsController < Devise::RegistrationsController
   end
 
   def after_update_path_for(resource)
-    dashboard_path(current_user.username)
+    profile_path(current_user.username)
   end
 end

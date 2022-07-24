@@ -6,7 +6,8 @@ Rails.application.routes.draw do
     post "login" => "users/sessions#create", as: :user_session
     delete "logout" => "users/sessions#destroy", as: :destroy_user_session
     get "register" => "users/registrations#new", as: :register
-    get ":username/profile" => "users/registrations#edit", as: :profile_edit
+    get ":username/profile" => "pages#profile", as: :profile
+    get ":username/profile/edit" => "users/registrations#edit", as: :profile_edit
   end
   scope ":username" do
     get "dashboard" => "pages#dashboard"
