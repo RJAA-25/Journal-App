@@ -8,5 +8,4 @@ class ApplicationController < ActionController::Base
     @tasks = Task.where(completed: false).where("deadline < ?", DateTime.current)
     @tasks.update_all(overdue: true)
   end
-  
 end

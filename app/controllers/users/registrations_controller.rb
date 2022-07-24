@@ -64,6 +64,10 @@ class Users::RegistrationsController < Devise::RegistrationsController
     devise_parameter_sanitizer.permit(:account_update, keys: [:first_name, :last_name, :username, :bio])
   end
 
+  def after_sign_in_path_for(resource)
+    dashboard_path(current_user.username)
+  end
+
   def after_sign_up_path_for(resource)
     dashboard_path(current_user.username)
   end
