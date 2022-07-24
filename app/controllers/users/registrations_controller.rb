@@ -3,6 +3,7 @@
 class Users::RegistrationsController < Devise::RegistrationsController
   before_action :configure_sign_up_params, only: [:create]
   before_action :configure_account_update_params, only: [:update]
+  before_action :restrict_account, only: [:edit]
 
   def create
     build_resource(sign_up_params)
@@ -26,10 +27,6 @@ class Users::RegistrationsController < Devise::RegistrationsController
   end
 
   def edit
-    if params[:username] != current_user.username
-      flash[:alert] = "Forbidden action. You only have access to your account"
-      redirect_to dashboard_path(current_user.username)
-    end
   end
 
   def update
@@ -48,7 +45,6 @@ class Users::RegistrationsController < Devise::RegistrationsController
     end
   end
 
-  # DELETE /resource
   def destroy
     resource.destroy
     Devise.sign_out_all_scopes ? sign_out : sign_out(resource_name)

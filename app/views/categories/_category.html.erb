@@ -20,7 +20,7 @@
   <div class="row px-3 pt-3 pb-3 bg-white" style="border-style: solid; border-width: 2px; border-color: <%= obj.theme_color %>;">
     <div class="col collapse" id="categoryInfo">
       <p class="fs-light"><%= obj.description %></p>
-      <p class="text-muted text-end">Updated <%= obj.updated_at %></p>
+      <p class="text-muted text-end">Updated <%= obj.updated_at.to_fs(:long) %></p>
     </div>
   </div>
 </div>

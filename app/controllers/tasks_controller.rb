@@ -1,5 +1,6 @@
 class TasksController < ApplicationController
   before_action :authenticate_user!
+  before_action :restrict_account
   before_action :toggle_overdue, only: [:show]
   before_action :set_category
   before_action :set_task, only: [:show, :edit, :update, :destroy, :toggle]
@@ -15,6 +16,7 @@ class TasksController < ApplicationController
   def create
     @task = @category.tasks.build(task_params)
     if @task.save
+      @category.update(updated_at: DateTime.current)
       flash[:notice] = "Task has been added"
       redirect_to category_task_path(current_user.username, @category, @task)
     else
@@ -27,7 +29,8 @@ class TasksController < ApplicationController
 
   def update
     if @task.update(task_params)
-      flash[:notice] = "Task has been updated successfully"
+      @category.update(updated_at: DateTime.current)
+      flash[:notice] = "Task has been updated"
       redirect_to category_task_path(current_user.username, @category, @task)
     else
       render :edit, status: :unprocessable_entity
@@ -36,7 +39,7 @@ class TasksController < ApplicationController
 
   def destroy
     @task.destroy
-    flash[:alert] = "Task has been removed successfully"
+    flash[:alert] = "Task has been removed"
     redirect_to category_path(current_user.username, @category), status: :see_other
   end
 

@@ -5,7 +5,14 @@ class ApplicationController < ActionController::Base
   end
 
   def toggle_overdue
-    @tasks = Task.where(completed: false).where("deadline < ?", DateTime.current)
+    @tasks = current_user.tasks.where(completed: false).where("deadline < ?", DateTime.current)
     @tasks.update_all(overdue: true)
+  end
+
+  def restrict_account
+    if params[:username] != current_user.username
+      flash[:alert] = "Forbidden action. You only have access to your account."
+      redirect_to dashboard_path(current_user.username)
+    end
   end
 end
