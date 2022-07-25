@@ -1,5 +1,5 @@
 class PagesController < ApplicationController
-  before_action :authenticate_user!, only: [:dashboard]
+  before_action :authenticate_user!, except: [:home]
   before_action :restrict_account, except: [:home]
   before_action :toggle_overdue, only: [:dashboard]
 

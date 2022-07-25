@@ -1,15 +1,19 @@
 require "test_helper"
 
 class CategoryFlowTest < ActionDispatch::IntegrationTest
+  include Devise::Test::IntegrationHelpers
+
   setup do
-    @category = Category.create(name: "Category 1", description: "This is a description")
+    @user = User.create(first_name: "First", last_name: "Last", username: "username", email: "username@email.com ", password: "password")
+    sign_in(@user)
+    @category = Category.create(name: "Category 1", description: "This is a description", user_id: @user.id)
   end
 
   test "should create a new category" do
-    get new_category_path
+    get new_category_path(@user.username)
     assert_response :success
     assert_difference "Category.count", 1 do
-      post categories_path, params: { category: { name: "Example", description: "This is a description", theme_color: "#540D6E" } }
+      post categories_path(@user.username), params: { category: { name: "Example", description: "This is a description", theme_color: "#540D6E" } }
       assert_response :redirect
     end
     follow_redirect!
@@ -18,12 +22,12 @@ class CategoryFlowTest < ActionDispatch::IntegrationTest
   end
 
   test "should show and update existing category" do
-    get category_path(@category)
+    get category_path(@user.username, @category)
     assert_response :success
-    get edit_category_path(@category)
+    get edit_category_path(@user.username, @category)
     assert_response :success
     assert_no_difference "Category.count" do
-      patch  category_path(@category), params: { category: { name: "Example", description: "This is a description", theme_color: "#540D6E" } }
+      patch  category_path(@user.username, @category), params: { category: { name: "Example", description: "This is a description", theme_color: "#540D6E" } }
       assert_response :redirect
     end
     follow_redirect!
@@ -32,10 +36,10 @@ class CategoryFlowTest < ActionDispatch::IntegrationTest
   end
 
   test "should delete an existing category" do
-    get category_path(@category)
+    get category_path(@user.username, @category)
     assert_response :success
     assert_difference "Category.count", -1 do
-      delete category_path(@category)
+      delete category_path(@user.username, @category)
       assert_response :redirect
     end
     follow_redirect!

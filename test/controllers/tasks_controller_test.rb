@@ -69,4 +69,36 @@ class TasksControllerTest < ActionDispatch::IntegrationTest
     assert_not_equal @task.completed, @same_task.completed
     assert_redirected_to category_task_path(@user.username, @category, @task)
   end
+
+
+  # Restrictions
+  test "should not reach show, new, edit actions when not signed_in" do
+    sign_out(@user)
+
+    get category_task_path(@user.username, @category, @task)
+    assert_response :redirect 
+    assert_redirected_to new_user_session_path
+
+    get new_category_task_path(@user.username, @category)
+    assert_response :redirect 
+    assert_redirected_to new_user_session_path
+
+    get edit_category_task_path(@user.username, @category, @task)
+    assert_response :redirect 
+    assert_redirected_to new_user_session_path
+  end
+
+  test "should not reach show, new, edit actions of other accounts" do
+    get category_task_path("anotherAccount", @category, @task)
+    assert_response :redirect
+    assert_redirected_to dashboard_path(@user.username)
+
+    get new_category_task_path("anotherAccount", @category)
+    assert_response :redirect
+    assert_redirected_to dashboard_path(@user.username)
+
+    get edit_category_task_path("anotherAccount", @category, @task)
+    assert_response :redirect
+    assert_redirected_to dashboard_path(@user.username)
+  end
 end

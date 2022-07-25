@@ -12,35 +12,11 @@
           1,
           1,
           1,
-          1,
           null
         ]
       },
       "/home/raasdillo/AvionSchool/Batch18/projects/journal_app/app/models/application_record.rb": {
         "lines": [
-          1,
-          1,
-          null
-        ]
-      },
-      "/home/raasdillo/AvionSchool/Batch18/projects/journal_app/app/models/category.rb": {
-        "lines": [
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          null
-        ]
-      },
-      "/home/raasdillo/AvionSchool/Batch18/projects/journal_app/app/models/task.rb": {
-        "lines": [
-          1,
-          1,
-          1,
-          1,
-          1,
           1,
           1,
           null
@@ -230,9 +206,36 @@
         ],
         "branches": {
         }
+      },
+      "/home/raasdillo/AvionSchool/Batch18/projects/journal_app/app/models/category.rb": {
+        "lines": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "branches": {
+        }
+      },
+      "/home/raasdillo/AvionSchool/Batch18/projects/journal_app/app/models/task.rb": {
+        "lines": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "branches": {
+        }
       }
     },
-    "timestamp": 1658690342
+    "timestamp": 1658727588
   },
   "Unit Tests": {
     "coverage": {
@@ -257,51 +260,6 @@
           null
         ]
       },
-      "/home/raasdillo/AvionSchool/Batch18/projects/journal_app/app/controllers/pages_controller.rb": {
-        "lines": [
-          1,
-          1,
-          1,
-          1,
-          null,
-          1,
-          null,
-          null,
-          1,
-          1,
-          1,
-          1,
-          1,
-          null,
-          null,
-          1,
-          1,
-          null,
-          null
-        ]
-      },
-      "/home/raasdillo/AvionSchool/Batch18/projects/journal_app/app/controllers/application_controller.rb": {
-        "lines": [
-          1,
-          null,
-          1,
-          1,
-          null,
-          null,
-          1,
-          1,
-          1,
-          null,
-          null,
-          1,
-          2,
-          0,
-          0,
-          null,
-          null,
-          null
-        ]
-      },
       "/home/raasdillo/AvionSchool/Batch18/projects/journal_app/app/models/category.rb": {
         "lines": [
           1,
@@ -324,6 +282,30 @@
           1,
           null
         ]
+      },
+      "/home/raasdillo/AvionSchool/Batch18/projects/journal_app/app/controllers/application_controller.rb": {
+        "lines": [
+          0,
+          null,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "branches": {
+        }
       },
       "/home/raasdillo/AvionSchool/Batch18/projects/journal_app/app/controllers/categories_controller.rb": {
         "lines": [
@@ -370,6 +352,31 @@
           0,
           null,
           null,
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0
+        ],
+        "branches": {
+        }
+      },
+      "/home/raasdillo/AvionSchool/Batch18/projects/journal_app/app/controllers/pages_controller.rb": {
+        "lines": [
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          null,
+          0,
+          0,
           0,
           0,
           0,
@@ -462,7 +469,7 @@
         }
       }
     },
-    "timestamp": 1658721487
+    "timestamp": 1658727337
   },
   "Integration Tests": {
     "coverage": {
@@ -477,7 +484,6 @@
           1,
           1,
           1,
-          1,
           null
         ]
       },
@@ -488,101 +494,29 @@
           null
         ]
       },
-      "/home/raasdillo/AvionSchool/Batch18/projects/journal_app/app/controllers/users/sessions_controller.rb": {
-        "lines": [
-          null,
-          null,
-          1,
-          1,
-          1,
-          0,
-          0,
-          0,
-          0,
-          null,
-          null,
-          1,
-          1,
-          1,
-          1,
-          1,
-          null,
-          null,
-          null,
-          1,
-          1,
-          0,
-          null,
-          null
-        ]
-      },
       "/home/raasdillo/AvionSchool/Batch18/projects/journal_app/app/controllers/application_controller.rb": {
         "lines": [
-          1,
+          0,
           null,
-          1,
-          1,
-          null,
-          null,
-          1,
-          1,
-          1,
-          null,
-          null,
-          1,
-          1,
+          0,
           0,
           0,
           null,
-          null,
-          null
-        ]
-      },
-      "/home/raasdillo/AvionSchool/Batch18/projects/journal_app/app/controllers/pages_controller.rb": {
-        "lines": [
-          1,
-          1,
-          1,
-          1,
-          null,
-          1,
-          null,
-          null,
-          1,
-          1,
-          1,
-          1,
-          1,
-          null,
-          null,
-          1,
+          0,
+          0,
+          0,
           0,
           null,
-          null
-        ]
-      },
-      "/home/raasdillo/AvionSchool/Batch18/projects/journal_app/app/models/category.rb": {
-        "lines": [
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          null
-        ]
-      },
-      "/home/raasdillo/AvionSchool/Batch18/projects/journal_app/app/models/task.rb": {
-        "lines": [
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          null
-        ]
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "branches": {
+        }
       },
       "/home/raasdillo/AvionSchool/Batch18/projects/journal_app/app/controllers/categories_controller.rb": {
         "lines": [
@@ -629,6 +563,31 @@
           0,
           null,
           null,
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0
+        ],
+        "branches": {
+        }
+      },
+      "/home/raasdillo/AvionSchool/Batch18/projects/journal_app/app/controllers/pages_controller.rb": {
+        "lines": [
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          null,
+          0,
+          0,
           0,
           0,
           0,
@@ -720,81 +679,25 @@
         "branches": {
         }
       },
-      "/home/raasdillo/AvionSchool/Batch18/projects/journal_app/app/controllers/users/registrations_controller.rb": {
+      "/home/raasdillo/AvionSchool/Batch18/projects/journal_app/app/models/category.rb": {
         "lines": [
-          null,
-          null,
-          0,
-          0,
-          0,
-          0,
-          null,
           0,
           0,
           0,
           0,
           0,
           0,
+          0
+        ],
+        "branches": {
+        }
+      },
+      "/home/raasdillo/AvionSchool/Batch18/projects/journal_app/app/models/task.rb": {
+        "lines": [
           0,
           0,
           0,
           0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          null,
-          0,
-          0,
-          null,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          null,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          null,
-          0,
-          0,
-          0,
-          0,
-          null,
-          0,
-          0,
-          0,
-          null,
-          0,
-          0,
-          0,
-          null,
-          0,
-          0,
-          0,
-          null,
           0,
           0,
           0,
@@ -804,6 +707,6 @@
         }
       }
     },
-    "timestamp": 1658688279
+    "timestamp": 1658725687
   }
 }

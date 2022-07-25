@@ -58,4 +58,36 @@ class CategoriesControllerTest < ActionDispatch::IntegrationTest
     end
     assert_redirected_to dashboard_path(@user.username)
   end
+
+  
+  # Restrictions
+  test "should not reach show, new, edit actions when not signed_in" do
+    sign_out(@user)
+
+    get category_path(@user.username, @category)
+    assert_response :redirect 
+    assert_redirected_to new_user_session_path
+
+    get new_category_path(@user.username)
+    assert_response :redirect 
+    assert_redirected_to new_user_session_path
+
+    get edit_category_path(@user.username, @category)
+    assert_response :redirect 
+    assert_redirected_to new_user_session_path
+  end
+
+  test "should not reach show, new, edit actions of other accounts" do
+    get category_path("anotherAccount", @category)
+    assert_response :redirect
+    assert_redirected_to dashboard_path(@user.username)
+
+    get new_category_path("anotherAccount")
+    assert_response :redirect
+    assert_redirected_to dashboard_path(@user.username)
+
+    get edit_category_path("anotherAccount", @category)
+    assert_response :redirect
+    assert_redirected_to dashboard_path(@user.username)
+  end
 end
