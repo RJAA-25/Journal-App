@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 class Users::RegistrationsController < Devise::RegistrationsController
   before_action :configure_sign_up_params, only: [:create]
   before_action :configure_account_update_params, only: [:update]
@@ -37,7 +35,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
     if resource_updated
       set_flash_message_for_update(resource, prev_unconfirmed_email)
       bypass_sign_in resource, scope: resource_name if sign_in_after_change_password?
-      respond_with resource, location: after_update_path_for(resource)
+      respond_with resource, location: after_update_path_for(resource), status: :see_other
     else
       flash[:alert] = "Oops, something went wrong. Fill out the form correctly."
       clean_up_passwords resource
