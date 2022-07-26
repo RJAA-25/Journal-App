@@ -5,7 +5,9 @@
     <p class="p-3 mb-5">Organize day-to-day tasks and save time for the things that matter to you most.</p>
     <div class="d-flex justify-content-between">
       <a href="https://github.com/RJAA-25/Journal-App" target="_blank" class="btn btn-light text-primary"><i class="bi bi-github"></i></a>
-      <a href="/login" class="btn btn-light"><%= current_user ? "Go to Dashboard" : "Get Started" %></a>
+      <a href=<%= current_user ? "/#{current_user.username}/dashboard" : "/login" %> class="btn btn-light">
+        <%= current_user ? "Go to Dashboard" : "Get Started" %>
+      </a>
     </div>
   </div>
 </div>
