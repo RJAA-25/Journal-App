@@ -1,15 +1,15 @@
-# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+# # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  name: MyString
-  details: MyText
-  deadline: 2022-07-11 20:17:10
-  completed: false
-  category: one
-
-two:
-  name: MyString
-  details: MyText
-  deadline: 2022-07-11 20:17:10
-  completed: false
-  category: two
+# one:
+#   name: Task
+#   details: A detail
+#   deadline: 2022-07-30 20:00:00
+#   completed: false
+#   overdue: false
+#   category: one
+# two:
+#   name: MyString
+#   details: MyText
+#   deadline: 2022-07-11 20:17:10
+#   completed: false
+#   category: two

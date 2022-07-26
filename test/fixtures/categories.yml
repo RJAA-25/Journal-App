@@ -1,11 +1,11 @@
-# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+# # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  name: MyString
-  description: MyText
-  theme_color: MyString
-
-two:
-  name: MyString
-  description: MyText
-  theme_color: MyString
+# one:
+#   name: Category
+#   description: A description
+#   theme_color: #540D6E
+#   user: one
+# two:
+#   name: MyString
+#   description: MyText
+#   theme_color: MyString

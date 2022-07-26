@@ -22,29 +22,73 @@
           null
         ]
       },
+      "/home/raasdillo/AvionSchool/Batch18/projects/journal_app/app/models/category.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null
+        ]
+      },
+      "/home/raasdillo/AvionSchool/Batch18/projects/journal_app/app/models/task.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null
+        ]
+      },
+      "/home/raasdillo/AvionSchool/Batch18/projects/journal_app/app/controllers/pages_controller.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
       "/home/raasdillo/AvionSchool/Batch18/projects/journal_app/app/controllers/application_controller.rb": {
         "lines": [
-          0,
+          1,
           null,
-          0,
-          0,
-          0,
+          1,
+          1,
           null,
-          0,
-          0,
-          0,
-          0,
           null,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0
-        ],
-        "branches": {
-        }
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          4,
+          2,
+          2,
+          null,
+          null,
+          null
+        ]
       },
       "/home/raasdillo/AvionSchool/Batch18/projects/journal_app/app/controllers/categories_controller.rb": {
         "lines": [
@@ -91,31 +135,6 @@
           0,
           null,
           null,
-          0,
-          0,
-          0,
-          0,
-          null,
-          0,
-          0,
-          0,
-          0
-        ],
-        "branches": {
-        }
-      },
-      "/home/raasdillo/AvionSchool/Batch18/projects/journal_app/app/controllers/pages_controller.rb": {
-        "lines": [
-          0,
-          0,
-          0,
-          0,
-          null,
-          0,
-          0,
-          null,
-          0,
-          0,
           0,
           0,
           0,
@@ -206,36 +225,9 @@
         ],
         "branches": {
         }
-      },
-      "/home/raasdillo/AvionSchool/Batch18/projects/journal_app/app/models/category.rb": {
-        "lines": [
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0
-        ],
-        "branches": {
-        }
-      },
-      "/home/raasdillo/AvionSchool/Batch18/projects/journal_app/app/models/task.rb": {
-        "lines": [
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0
-        ],
-        "branches": {
-        }
       }
     },
-    "timestamp": 1658727588
+    "timestamp": 1658820061
   },
   "Unit Tests": {
     "coverage": {
@@ -271,99 +263,83 @@
           null
         ]
       },
-      "/home/raasdillo/AvionSchool/Batch18/projects/journal_app/app/models/task.rb": {
+      "/home/raasdillo/AvionSchool/Batch18/projects/journal_app/app/controllers/categories_controller.rb": {
         "lines": [
           1,
           1,
           1,
           1,
           1,
+          null,
+          1,
+          0,
+          null,
+          null,
           1,
           1,
+          null,
+          null,
+          1,
+          2,
+          2,
+          0,
+          0,
+          null,
+          1,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
+          1,
+          0,
+          0,
+          0,
+          null,
+          0,
+          null,
+          null,
+          null,
+          1,
+          0,
+          0,
+          0,
+          null,
+          null,
+          null,
+          1,
+          1,
+          0,
+          null,
+          null,
+          1,
+          2,
+          null,
           null
         ]
       },
       "/home/raasdillo/AvionSchool/Batch18/projects/journal_app/app/controllers/application_controller.rb": {
         "lines": [
+          1,
+          null,
+          1,
           0,
           null,
-          0,
-          0,
-          0,
           null,
-          0,
-          0,
-          0,
-          0,
-          null,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0
-        ],
-        "branches": {
-        }
-      },
-      "/home/raasdillo/AvionSchool/Batch18/projects/journal_app/app/controllers/categories_controller.rb": {
-        "lines": [
-          0,
-          0,
-          0,
-          0,
-          0,
-          null,
-          0,
-          0,
-          0,
-          null,
-          0,
-          0,
-          0,
-          null,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          null,
-          0,
-          0,
-          null,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          null,
-          0,
-          0,
-          0,
+          1,
           0,
           0,
           null,
           null,
-          0,
-          0,
+          1,
+          3,
           0,
           0,
           null,
-          0,
-          0,
-          0,
-          0
-        ],
-        "branches": {
-        }
+          null,
+          null
+        ]
       },
       "/home/raasdillo/AvionSchool/Batch18/projects/journal_app/app/controllers/pages_controller.rb": {
         "lines": [
@@ -467,9 +443,23 @@
         ],
         "branches": {
         }
+      },
+      "/home/raasdillo/AvionSchool/Batch18/projects/journal_app/app/models/task.rb": {
+        "lines": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "branches": {
+        }
       }
     },
-    "timestamp": 1658727337
+    "timestamp": 1658823528
   },
   "Integration Tests": {
     "coverage": {
