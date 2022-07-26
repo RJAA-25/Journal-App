@@ -33,6 +33,13 @@ class UserTest < ActiveSupport::TestCase
     assert_not @user.save
   end
 
+  test "should not save when username is not unique" do
+    @valid_user = User.create(first_name: "Valid", last_name: "Example", username: "validExample", email: "validExample@email.com", password: "password")
+
+    @user.username = "validExample"
+    assert_not @user.save
+  end
+
   # :email attribute tests
   test "should not save without email" do
     @user.email = nil
@@ -65,36 +72,36 @@ class UserTest < ActiveSupport::TestCase
   # Model Associations
   # User - Category
   test "should get category count under a user" do
-    @user.save
-    assert_equal @user.categories.count, 0
-
-    @category = Category.create(name: "Category", description: "A description", user_id: @user.id)
-    assert_equal @user.categories.count, 1
+    @valid_user = User.create(first_name: "Valid", last_name: "Example", username: "validExample", email: "validExample@email.com", password: "password")
+    assert_equal @valid_user.categories.count, 0
+    
+    @valid_category = Category.create(name: "Valid Category", description: "A description", user_id: @valid_user.id)
+    assert_equal @valid_user.categories.count, 1
   end
 
   test "should get category details under a user" do
-    @user.save
-    @category = Category.create(name: "Category", description: "A description", user_id: @user.id)
-    assert_equal @user.categories.last.name, "Category"
+    @valid_user = User.create(first_name: "Valid", last_name: "Example", username: "validExample", email: "validExample@email.com", password: "password")
+    @valid_category = Category.create(name: "Valid Category", description: "A description", user_id: @valid_user.id)
+    assert_equal @valid_user.categories.last.name, "Valid Category"
   end
 
   # User - Task
   test "should get task count under a user" do
-    @user.save
-    @category = Category.create(name: "Category", description: "A description", user_id: @user.id)
-    assert_equal @user.tasks.count, 0
-    
-    @task= Task.create(name: "Task#1", details: "A detail", deadline: DateTime.current + 1.hour, category_id: @category.id)
-    assert_equal @user.tasks.count, 1
+    @valid_user = User.create(first_name: "Valid", last_name: "Example", username: "validExample", email: "validExample@email.com", password: "password")
+    assert_equal @valid_user.tasks.count, 0
+
+    @valid_category = Category.create(name: "Valid Category", description: "A description", user_id: @valid_user.id)
+    @valid_task= Task.create(name: "Valid Task", details: "A detail", deadline: DateTime.current + 1.hour, category_id: @valid_category.id)
+    assert_equal @valid_user.tasks.count, 1
   end
 
   # Dependent Destroy
   test "should destroy associated categories and tasks when deleted" do
-    @user.save
-    @category = Category.create(name: "Category", description: "A description", user_id: @user.id)
-    @task = Task.create(name: "Task#1", details: "A detail", deadline: DateTime.current + 1.hour, category_id: @category.id)
+    @valid_user = User.create(first_name: "Valid", last_name: "Example", username: "validExample", email: "validExample@email.com", password: "password")
+    @valid_category = Category.create(name: "Valid Category", description: "A description", user_id: @valid_user.id)
+    @valid_task= Task.create(name: "Valid Task", details: "A detail", deadline: DateTime.current + 1.hour, category_id: @valid_category.id)
     assert_difference "User.count", -1, "Category.count", -1, "Task.count", -1  do
-      @user.destroy
+      @valid_user.destroy
     end
   end
 end
