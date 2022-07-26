@@ -40,16 +40,17 @@ class PagesControllerTest < ActionDispatch::IntegrationTest
     assert_redirected_to new_user_session_path
   end
 
-  test "should not reach dashboard, profile of other accounts" do
+  test "should not reach dashboard of other accounts" do
     sign_in(@user)
-    
     get dashboard_path("anotherAccount")
-    assert_response :redirect
-    assert_redirected_to dashboard_path(@user.username)
-
-    get profile_path("anotherAccount")
     assert_response :redirect
     assert_redirected_to dashboard_path(@user.username)
   end  
 
+  test "should not reach profile of other accountes" do
+    sign_in(@user)
+    get profile_path("anotherAccount")
+    assert_response :redirect
+    assert_redirected_to dashboard_path(@user.username)
+  end
 end
