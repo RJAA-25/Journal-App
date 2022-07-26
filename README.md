@@ -40,6 +40,7 @@ Use the application in you local machine by running these commands in terminal o
 ```
 git clone https://github.com/RJAA-25/Journal-App.git
 bundle install
+rails db:migrate
 rails server
 ```
 The application will be running in *https://localhost:3000*
