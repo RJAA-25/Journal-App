@@ -47,7 +47,7 @@ gem 'jquery-rails'
 # gem 'bootstrap-icons'
 gem 'byebug', '~> 9.0', '>= 9.0.6'
 gem 'devise'
-gem 'rails-controller-testing'
+# gem 'rails-controller-testing'
 
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
