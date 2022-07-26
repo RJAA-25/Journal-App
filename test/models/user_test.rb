@@ -72,7 +72,7 @@ class UserTest < ActiveSupport::TestCase
   # Model Associations
   # User - Category
   test "should get category count under a user" do
-    @valid_user = User.create(first_name: "Valid", last_name: "Example", username: "validExample", email: "validExample@email.com", password: "password")
+    @valid_user = User.create(first_name: "Valid", last_name: "Example", username: "validExample", email: "valid_example@email.com", password: "password")
     assert_equal @valid_user.categories.count, 0
     
     @valid_category = Category.create(name: "Valid Category", description: "A description", user_id: @valid_user.id)
@@ -80,14 +80,14 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test "should get category details under a user" do
-    @valid_user = User.create(first_name: "Valid", last_name: "Example", username: "validExample", email: "validExample@email.com", password: "password")
+    @valid_user = User.create(first_name: "Valid", last_name: "Example", username: "validExample", email: "valid_example@email.com", password: "password")
     @valid_category = Category.create(name: "Valid Category", description: "A description", user_id: @valid_user.id)
     assert_equal @valid_user.categories.last.name, "Valid Category"
   end
 
   # User - Task
   test "should get task count under a user" do
-    @valid_user = User.create(first_name: "Valid", last_name: "Example", username: "validExample", email: "validExample@email.com", password: "password")
+    @valid_user = User.create(first_name: "Valid", last_name: "Example", username: "validExample", email: "valid_example@email.com", password: "password")
     assert_equal @valid_user.tasks.count, 0
 
     @valid_category = Category.create(name: "Valid Category", description: "A description", user_id: @valid_user.id)
@@ -97,7 +97,7 @@ class UserTest < ActiveSupport::TestCase
 
   # Dependent Destroy
   test "should destroy associated categories and tasks when deleted" do
-    @valid_user = User.create(first_name: "Valid", last_name: "Example", username: "validExample", email: "validExample@email.com", password: "password")
+    @valid_user = User.create(first_name: "Valid", last_name: "Example", username: "validExample", email: "valid_example@email.com", password: "password")
     @valid_category = Category.create(name: "Valid Category", description: "A description", user_id: @valid_user.id)
     @valid_task= Task.create(name: "Valid Task", details: "A detail", deadline: DateTime.current + 1.hour, category_id: @valid_category.id)
     assert_difference "User.count", -1, "Category.count", -1, "Task.count", -1  do
