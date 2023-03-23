@@ -22,5 +22,6 @@ test:
 
 production:
   <<: *default
+  adapter: cockroachdb
   url: <%= ENV["DATABASE_URL"] %>
   sslrootcert: "./root.crt"
