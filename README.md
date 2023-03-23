@@ -4,7 +4,7 @@ Pluma is a journal app where you can list down and be reminded of your day-to-da
 
 Pluma is there to help you organize tasks and save time so you can spend it on the things that matter to you most.
 
-Live website: https://rjaa25-pluma.herokuapp.com/
+Live website: https://pluma.onrender.com/
 
 ## Don't want to make an account? 
 Use these credentials to log in and get a feel of using the application.
