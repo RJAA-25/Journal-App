@@ -41,7 +41,7 @@ gem "bootsnap", require: false
 
 # Use Sass to process CSS
 # gem "sassc-rails"
-# gem "pg"
+gem "pg"
 gem 'bootstrap', '~> 5.1.3'
 gem 'jquery-rails'
 # gem 'bootstrap-icons'
@@ -76,8 +76,4 @@ group :test do
   gem "selenium-webdriver"
   gem "webdrivers"
   gem "simplecov", require: false
-end
-
-group :production do
-  gem "pg"
 end
